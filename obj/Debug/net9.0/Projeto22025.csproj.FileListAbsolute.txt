@@ -10,8 +10,6 @@ C:\Users\FEMA\Downloads\Projeto22025\bin\Debug\net9.0\Projeto22025.pdb
 C:\Users\FEMA\Downloads\Projeto22025\bin\Debug\net9.0\Azure.Core.dll
 C:\Users\FEMA\Downloads\Projeto22025\bin\Debug\net9.0\Azure.Identity.dll
 C:\Users\FEMA\Downloads\Projeto22025\bin\Debug\net9.0\Humanizer.dll
-C:\Users\FEMA\Downloads\Projeto22025\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.Internal.dll
-C:\Users\FEMA\Downloads\Projeto22025\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 C:\Users\FEMA\Downloads\Projeto22025\bin\Debug\net9.0\Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll
 C:\Users\FEMA\Downloads\Projeto22025\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\FEMA\Downloads\Projeto22025\bin\Debug\net9.0\Microsoft.Bcl.AsyncInterfaces.dll
@@ -34,8 +32,6 @@ C:\Users\FEMA\Downloads\Projeto22025\bin\Debug\net9.0\Microsoft.Extensions.Confi
 C:\Users\FEMA\Downloads\Projeto22025\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\FEMA\Downloads\Projeto22025\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\FEMA\Downloads\Projeto22025\bin\Debug\net9.0\Microsoft.Extensions.DependencyModel.dll
-C:\Users\FEMA\Downloads\Projeto22025\bin\Debug\net9.0\Microsoft.Extensions.Identity.Core.dll
-C:\Users\FEMA\Downloads\Projeto22025\bin\Debug\net9.0\Microsoft.Extensions.Identity.Stores.dll
 C:\Users\FEMA\Downloads\Projeto22025\bin\Debug\net9.0\Microsoft.Extensions.Logging.dll
 C:\Users\FEMA\Downloads\Projeto22025\bin\Debug\net9.0\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\FEMA\Downloads\Projeto22025\bin\Debug\net9.0\Microsoft.Extensions.Options.dll
@@ -403,4 +399,6 @@ C:\Users\FEMA\Downloads\Projeto22025\bin\Debug\net9.0\ru\Microsoft.CodeAnalysis.
 C:\Users\FEMA\Downloads\Projeto22025\bin\Debug\net9.0\tr\Microsoft.CodeAnalysis.Scripting.resources.dll
 C:\Users\FEMA\Downloads\Projeto22025\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Scripting.resources.dll
 C:\Users\FEMA\Downloads\Projeto22025\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
+C:\Users\FEMA\Downloads\Projeto22025\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.UI.dll
+C:\Users\FEMA\Downloads\Projeto22025\obj\Debug\net9.0\Projeto22025.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\FEMA\Downloads\Projeto22025\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
