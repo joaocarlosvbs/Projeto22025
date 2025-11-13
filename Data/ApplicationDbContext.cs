@@ -1,7 +1,8 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿// Topo do arquivo
+using Microsoft.AspNetCore.Identity; // Para IdentityRole
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using Projeto22025.Models;
+using Projeto22025.Models; // <-- IMPORTANTE
 
 namespace Projeto22025.Data
 {
@@ -17,13 +18,11 @@ namespace Projeto22025.Data
         public DbSet<Produto> Produtos { get; set; }
         public DbSet<Movimentacao> Movimentacoes { get; set; }
 
+        // Isso cria as "Roles" (Funções) de usuário no banco
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            // ESSENCIAL: Isso garante que as tabelas do Identity (AspNetUsers, etc.)
-            // sejam configuradas corretamente ANTES do seu código.
             base.OnModelCreating(builder);
 
-            // Seed Roles (Funções)
             builder.Entity<IdentityRole>().HasData(
                 new IdentityRole { Id = "a1-role-id", Name = "Almoxarife", NormalizedName = "ALMOXARIFE" },
                 new IdentityRole { Id = "s1-role-id", Name = "Servidor", NormalizedName = "SERVIDOR" }

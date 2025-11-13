@@ -401,4 +401,3 @@ C:\Users\FEMA\Downloads\Projeto22025\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnal
 C:\Users\FEMA\Downloads\Projeto22025\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
 C:\Users\FEMA\Downloads\Projeto22025\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.UI.dll
 C:\Users\FEMA\Downloads\Projeto22025\obj\Debug\net9.0\Projeto22025.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\FEMA\Downloads\Projeto22025\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
