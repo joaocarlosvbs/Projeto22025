@@ -1,0 +1,58 @@
+﻿@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Log in";
+}
+
+<h1>@ViewData["Title"]</h1>
+<div class="row">
+    <div class="col-md-4">
+        <section>
+            <form id="account" method="post">
+                <h2>Use uma conta local para logar.</h2>
+                <hr />
+                <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+
+                <!-- ESTA É A MUDANÇA -->
+                <div class="form-floating mb-3">
+                    <input asp-for="Input.UsuarioOuCpf" class="form-control" autocomplete="username" aria-required="true" placeholder="Usuário ou CPF" />
+                    <label asp-for="Input.UsuarioOuCpf"></label>
+                    <span asp-validation-for="Input.UsuarioOuCpf" class="text-danger"></span>
+                </div>
+                <!-- FIM DA MUDANÇA -->
+
+                <div class="form-floating mb-3">
+                    <input asp-for="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" placeholder="password" />
+                    <label asp-for="Input.Password"></label>
+                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                </div>
+                <div class="checkbox mb-3">
+                    <label asp-for="Input.RememberMe" class="form-label">
+                        <input class="form-check-input" asp-for="Input.RememberMe" />
+                        @Html.DisplayNameFor(m => m.Input.RememberMe)
+                    </label>
+                </div>
+                <div>
+                    <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary">Log in</button>
+                </div>
+                <div>
+                    <p>
+                        <a id="forgot-password" asp-page="./ForgotPassword">Esqueceu sua senha?</a>
+                    </p>
+                    <p>
+                        <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Registrar um novo usuário</a>
+                    </p>
+                    <p>
+                        <a id="resend-confirmation" asp-page="./ResendEmailConfirmation">Reenviar confirmação de email</a>
+                    </p>
+                </div>
+            </form>
+        </section>
+    </div>
+    <!-- ... (o resto do arquivo pode continuar igual) ... -->
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -16,7 +16,7 @@ builder.Services.AddDefaultIdentity<Usuario>(options => options.SignIn.RequireCo
     .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
 
-// 3. Configurar Serviços
+// 3. Configurar Serviï¿½os
 builder.Services.AddControllersWithViews();
 builder.Services.AddScoped<Consultas>(); // Registra sua classe de consulta
 //Rotativa.AspNetCore.RotativaConfiguration.Setup(builder.Environment.WebRootPath, "Rotativa"); // Registra o PDF
@@ -39,7 +39,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-app.UseAuthentication(); // <-- Adicionado (Se já não estava)
+app.UseAuthentication(); // <-- Adicionado (Se jï¿½ nï¿½o estava)
 app.UseAuthorization();
 
 app.MapControllerRoute(
