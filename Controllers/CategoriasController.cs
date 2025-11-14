@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Projeto22025.Data;
 using Projeto22025.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Projeto22025.Controllers
 {
+    [Authorize(Roles = "Almoxarife")]
     public class CategoriasController : Controller
     {
         private readonly ApplicationDbContext _context;

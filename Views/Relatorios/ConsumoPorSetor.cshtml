@@ -1,0 +1,75 @@
+﻿@model IEnumerable<Projeto22025.Models.Relatorio>
+
+@{
+    ViewData["Title"] = "Consumo por Setor";
+}
+
+<h2>Relatório de Consumo por Setor</h2>
+
+<div class="mb-3">
+    <!-- MUDANÇA 1: O botão de PDF agora é um <button> normal com um ID -->
+    <button id="btnGerarPdf" class="btn btn-danger">Gerar PDF</button>
+
+    <!-- O botão de Excel continua o mesmo -->
+    <a asp-action="ExportarConsumoExcel" class="btn btn-success">Gerar Excel</a>
+</div>
+
+<!-- MUDANÇA 2: Damos um ID para a tabela, para o JavaScript saber o que copiar -->
+<table class="table table-striped table-bordered" id="tabelaRelatorio">
+    <thead class="table-dark">
+        <tr>
+            <th>Setor</th>
+            <th>Total de Itens Consumidos</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Grupo</td>
+                <td>@item.Total</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!-- MUDANÇA 3: Adicionamos a seção de Scripts no final -->
+@section Scripts {
+    <!-- 1. Importamos as bibliotecas jsPDF e html2canvas -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+    <script>
+        // 2. Quando a página carregar, adicione um 'click' ao nosso botão
+        document.addEventListener('DOMContentLoaded', function () {
+
+            // Define o que o jsPDF vai usar
+            const { jsPDF } = window.jspdf;
+
+            document.getElementById('btnGerarPdf').addEventListener('click', function () {
+
+                // 3. Pega o elemento da nossa tabela
+                const elemento = document.getElementById('tabelaRelatorio');
+
+                // 4. Usa o html2canvas para "tirar uma foto" da tabela
+                html2canvas(elemento).then(canvas => {
+                    // 5. Converte a "foto" em dados de imagem
+                    const imgData = canvas.toDataURL('image/png');
+
+                    // 6. Cria um novo documento PDF
+                    const doc = new jsPDF('p', 'mm', 'a4'); // p = retrato, mm = milímetros, a4 = tamanho
+
+                    const imgProps = doc.getImageProperties(imgData);
+                    const pdfWidth = doc.internal.pageSize.getWidth();
+                    const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+
+                    // 7. Adiciona a imagem ao PDF
+                    doc.addImage(imgData, 'PNG', 10, 10, pdfWidth - 20, pdfHeight - 20);
+
+                    // 8. Baixa o PDF
+                    doc.save('Relatorio_ConsumoPorSetor.pdf');
+                });
+            });
+        });
+    </script>
+}

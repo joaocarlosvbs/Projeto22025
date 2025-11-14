@@ -1,27 +1,27 @@
 ﻿using Microsoft.AspNetCore.Identity;
-using Projeto22025.Models;
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Projeto22025.Models; // <-- Adicionado
 
-public class Movimentacao
+namespace Projeto22025.Models
 {
-    public int Id { get; set; }
-    public int ProdutoId { get; set; }
-    public Produto ? Produto { get; set; }
-    public DateTime Data { get; set; }
-    public int Quantidade { get; set; } // Ex: +100 (Entrada), -5 (Saída)
-    public string ? Tipo { get; set; } // "Entrada" ou "Saída"
+    public class Movimentacao
+    {
+        public int Id { get; set; }
+        public int ProdutoId { get; set; }
+        public DateTime Data { get; set; }
+        public int Quantidade { get; set; }
+        public string Tipo { get; set; } = string.Empty;
+        public int? FornecedorId { get; set; }
+        public int? SetorId { get; set; }
+        public string UsuarioId { get; set; } = string.Empty;
 
-    // Relacionamentos para saber de onde veio e para onde foi
-    public int? FornecedorId { get; set; } // Nulo se for Saída
-    public Fornecedor? Fornecedor { get; set; }
+        // Propriedades de Navegação
+        public Produto? Produto { get; set; }
+        public Fornecedor? Fornecedor { get; set; }
+        public Setor? Setor { get; set; }
 
-    public int? SetorId { get; set; } // Nulo se for Entrada
-    public Setor? Setor { get; set; }
-
-    // Quem autorizou a movimentação (via Identity)
-    [Required] 
-    public string ? UsuarioId { get; set; }
-    [ForeignKey("UsuarioId")] 
-    public IdentityUser ? Usuario { get; set; }
+        [ForeignKey("UsuarioId")]
+        // 4. MUDANÇA PRINCIPAL AQUI
+        public Usuario? Usuario { get; set; } // <-- Aponta para seu usuário customizado
+    }
 }

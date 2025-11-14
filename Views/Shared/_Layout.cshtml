@@ -1,5 +1,6 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+﻿@using Microsoft.AspNetCore.Authorization <!-- ADICIONADO: Para a tag <AuthorizeView> funcionar -->
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -26,6 +27,30 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
+
+                        <!-- ==== INÍCIO DA ADIÇÃO ==== -->
+                        <!-- Esta tag garante que SÓ usuários na role "Almoxarife" vejam estes links -->
+                        <AuthorizeView Roles="Almoxarife">
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-controller="Produtos" asp-action="Index">Estoque</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-controller="Relatorios" asp-action="ConsumoPorSetor">Relatórios</a>
+                            </li>
+                            <!-- Item de menu Dropdown para "Cadastros" -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Cadastros
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" asp-controller="Categorias" asp-action="Index">Categorias</a></li>
+                                    <li><a class="dropdown-item" asp-controller="Setores" asp-action="Index">Setores</a></li>
+                                    <li><a class="dropdown-item" asp-controller="Fornecedores" asp-action="Index">Fornecedores</a></li>
+                                </ul>
+                            </li>
+                        </AuthorizeView>
+                        <!-- ==== FIM DA ADIÇÃO ==== -->
+
                     </ul>
                     <partial name="_LoginPartial" />
                 </div>

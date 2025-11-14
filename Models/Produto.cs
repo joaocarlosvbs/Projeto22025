@@ -2,26 +2,29 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema; // Para o [NotMapped]
 
-public class Produto
+namespace Projeto22025.Models
 {
-    [Required]
-    public int Id { get; set; }
+    public class Produto
+    {
+        [Required]
+        public int Id { get; set; }
 
-    [Required] 
-    public string ? Nome { get; set; }
-    [Required]
-    public string ? Descricao { get; set; }
-    [Required]
-    public int EstoqueAtual { get; set; }
+        [Required]
+        public string? Nome { get; set; }
+        [Required]
+        public string? Descricao { get; set; }
+        [Required]
+        public int EstoqueAtual { get; set; }
 
-    // Relacionamento
-    public int CategoriaId { get; set; }
-    public Categoria ? Categoria { get; set; }
+        // Relacionamento
+        public int CategoriaId { get; set; }
+        public Categoria? Categoria { get; set; }
 
-    public string? ImagemUrl { get; set; } // O '?' permite ser nulo
+        public string? ImagemUrl { get; set; } // O '?' permite ser nulo
 
 
-    [NotMapped] // Não salvar este campo no banco
-    [Display(Name = "Imagem do Produto")]
-    public IFormFile? ImagemUpload { get; set; }
+        [NotMapped] // Não salvar este campo no banco
+        [Display(Name = "Imagem do Produto")]
+        public IFormFile? ImagemUpload { get; set; }
+    }
 }
