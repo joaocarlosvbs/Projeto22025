@@ -1,44 +1,56 @@
 ﻿@model Projeto22025.Models.Movimentacao
 
-<h2>Registrar Entrada de Material</h2>
-<hr />
-<div class="row">
-    <div class="col-md-6">
-        <form asp-action="RegistrarEntrada">
+@{
+    ViewData["Title"] = "Registrar Entrada";
+}
 
-            <div class="form-group mb-3">
-                <label asp-for="ProdutoId" class="control-label"></label>
-                <select asp-for="ProdutoId" class="form-control" asp-items="ViewBag.ProdutoId">
-                    <option value="">-- Selecione --</option>
-                </select>
-                <span asp-validation-for="ProdutoId" class="text-danger"></span>
+<div class="row justify-content-center">
+    <div class="col-md-7">
+        <div class="card shadow-sm">
+            <div class="card-header">
+                <h4 class="mb-0">Registrar Entrada de Material</h4>
             </div>
+            <div class="card-body">
+                <form asp-action="RegistrarEntrada">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-            <div class="form-group mb-3">
-                <label asp-for="FornecedorId" class="control-label"></label>
-                <select asp-for="FornecedorId" class="form-control" asp-items="ViewBag.FornecedorId">
-                    <option value="">-- Selecione --</option>
-                </select>
-                <span asp-validation-for="FornecedorId" class="text-danger"></span>
-            </div>
+                    <div class="form-group mb-3">
+                        <label asp-for="ProdutoId" class="control-label"></label>
+                        <!-- O asp-items="ViewBag.ProdutoId" lê o ViewData["ProdutoId"] -->
+                        <select asp-for="ProdutoId" class="form-control" asp-items="ViewBag.ProdutoId">
+                            <option value="">-- Selecione um Produto --</option>
+                        </select>
+                        <span asp-validation-for="ProdutoId" class="text-danger"></span>
+                    </div>
 
-            <div class="form-group mb-3">
-                <label asp-for="Quantidade" class="control-label"></label>
-                <input asp-for="Quantidade" class="form-control" type="number" min="1" />
-                <span asp-validation-for="Quantidade" class="text-danger"></span>
-            </div>
+                    <div class="form-group mb-3">
+                        <label asp-for="FornecedorId" class="control-label"></label>
+                        <!-- O asp-items="ViewBag.FornecedorId" lê o ViewData["FornecedorId"] -->
+                        <select asp-for="FornecedorId" class="form-control" asp-items="ViewBag.FornecedorId">
+                            <option value="">-- Selecione um Fornecedor --</option>
+                        </select>
+                        <span asp-validation-for="FornecedorId" class="text-danger"></span>
+                    </div>
 
-            <!-- CAMPO DE DATA ADICIONADO -->
-            <div class="form-group mb-3">
-                <label asp-for="Data" class="control-label"></label>
-                <input asp-for="Data" class="form-control" type="date" />
-                <span asp-validation-for="Data" class="text-danger"></span>
-            </div>
+                    <div class="form-group mb-3">
+                        <label asp-for="Quantidade" class="control-label"></label>
+                        <input asp-for="Quantidade" class="form-control" type="number" min="1" />
+                        <span asp-validation-for="Quantidade" class="text-danger"></span>
+                    </div>
 
-            <div class="form-group">
-                <input type="submit" value="Registrar Entrada" class="btn btn-primary" />
+                    <div class="form-group mb-3">
+                        <label asp-for="Data" class="control-label"></label>
+                        <input asp-for="Data" class="form-control" type="date" />
+                        <span asp-validation-for="Data" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" value="Registrar Entrada" class="btn btn-primary" />
+                        <a asp-controller="Produtos" asp-action="Index" class="btn btn-outline-secondary">Cancelar</a>
+                    </div>
+                </form>
             </div>
-        </form>
+        </div>
     </div>
 </div>
 

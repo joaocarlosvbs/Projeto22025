@@ -4,7 +4,10 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Projeto22025</title>
+
+    <!-- MUDANÇA (SUGESTÃO DO COPILOT): Adicionado '??' para evitar NRE -->
+    <title>@(ViewData["Title"] ?? "Controle de Estoque") - Projeto22025</title>
+
     <script type="importmap"></script>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -16,7 +19,6 @@
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
             <div class="container-fluid">
 
-                <!-- MUDANÇA: GIF ADICIONADO AO TÍTULO -->
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
                     <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3Ztamh0cThsZmdmdWJjOXBoc3h5dHpkaDYxNm5yN3Y3cWY2dnRzZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/Lqpsk1QBLkR9e/giphy.gif"
                          alt="Logo" class="navbar-logo">
@@ -28,10 +30,8 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <!-- MUDANÇA: 'justify-content-between' REMOVIDO para permitir centralização -->
                 <div class="navbar-collapse collapse d-sm-inline-flex">
 
-                    <!-- MUDANÇA: 'flex-grow-1' REMOVIDO e 'mx-auto' ADICIONADO para centralizar o menu -->
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item">
                             <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index"><i class="bi bi-house-door"></i> Home</a>
@@ -84,7 +84,6 @@
                         </AuthorizeView>
                     </ul>
 
-                    <!-- MUDANÇA: Botões de Login/Logout agora ficam no final -->
                     <div class="navbar-nav ms-auto">
                         <partial name="_LoginPartial" />
                     </div>
@@ -98,14 +97,11 @@
         </main>
     </div>
 
-    <!-- MUDANÇA: 'border-top' REMOVIDO para tirar o risco -->
     <footer class="footer text-muted">
         <div class="container">
-            <!-- Conteúdo do footer removido, conforme solicitado -->
         </div>
     </footer>
 
-    <!-- Botão e Modal de Créditos (Sem alteração) -->
     <button class="btn-creditos" data-bs-toggle="modal" data-bs-target="#creditosModal" title="Créditos">
         Créditos
     </button>

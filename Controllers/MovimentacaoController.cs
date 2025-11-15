@@ -3,8 +3,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Projeto22025.Data;
 using Projeto22025.Models;
-using System.Security.Claims; // Para pegar o ID do usuário logado
-using Microsoft.AspNetCore.Authorization; // Para [Authorize]
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Projeto22025.Controllers
 {
@@ -21,12 +21,21 @@ namespace Projeto22025.Controllers
         // --- LÓGICA DE ENTRADA ---
 
         // GET: /Movimentacao/RegistrarEntrada
+        // Este método é chamado quando você clica no link do menu.
         public IActionResult RegistrarEntrada()
         {
-            // Pré-popula a data de hoje no formulário
+            // Correção 2 (Boa Prática): Define o Título
+            ViewData["Title"] = "Registrar Entrada";
+
             var model = new Movimentacao { Data = DateTime.Today };
-            ViewData["FornecedorId"] = new SelectList(_context.Fornecedores, "Id", "RazaoSocial");
-            ViewData["ProdutoId"] = new SelectList(_context.Produtos, "Id", "Nome");
+
+            // Correção 3 (A Causa do Erro): Busca os dados e envia para a View
+            var fornecedores = _context.Fornecedores.OrderBy(f => f.Razaosocial).ToList();
+            var produtos = _context.Produtos.OrderBy(p => p.Nome).ToList();
+
+            ViewData["FornecedorId"] = new SelectList(fornecedores, "Id", "Razaosocial");
+            ViewData["ProdutoId"] = new SelectList(produtos, "Id", "Nome");
+
             return View(model);
         }
 
@@ -43,7 +52,6 @@ namespace Projeto22025.Controllers
             }
 
             movimentacao.Tipo = "Entrada";
-            // A 'Data' vem do formulário
             movimentacao.UsuarioId = userId;
             movimentacao.SetorId = null;
 
@@ -65,7 +73,9 @@ namespace Projeto22025.Controllers
                 return RedirectToAction("Index", "Produtos");
             }
 
-            ViewData["FornecedorId"] = new SelectList(_context.Fornecedores, "Id", "RazaoSocial", movimentacao.FornecedorId);
+            // Se a validação falhar, re-popula os dropdowns e o título
+            ViewData["Title"] = "Registrar Entrada";
+            ViewData["FornecedorId"] = new SelectList(_context.Fornecedores, "Id", "Razaosocial", movimentacao.FornecedorId);
             ViewData["ProdutoId"] = new SelectList(_context.Produtos, "Id", "Nome", movimentacao.ProdutoId);
             return View(movimentacao);
         }
@@ -75,10 +85,9 @@ namespace Projeto22025.Controllers
         // GET: /Movimentacao/RegistrarSaida
         public IActionResult RegistrarSaida()
         {
-            // Pré-popula a data de hoje no formulário
+            ViewData["Title"] = "Registrar Saída";
             var model = new Movimentacao { Data = DateTime.Today };
             ViewData["SetorId"] = new SelectList(_context.Setores, "Id", "Nome");
-            // Mostra apenas produtos que têm estoque
             ViewData["ProdutoId"] = new SelectList(_context.Produtos.Where(p => p.EstoqueAtual > 0), "Id", "Nome");
             return View(model);
         }
@@ -96,7 +105,6 @@ namespace Projeto22025.Controllers
             }
 
             movimentacao.Tipo = "Saída";
-            // A 'Data' vem do formulário
             movimentacao.UsuarioId = userId;
             movimentacao.FornecedorId = null;
 
@@ -104,7 +112,6 @@ namespace Projeto22025.Controllers
             ModelState.Remove("Produto");
             ModelState.Remove("Usuario");
 
-            // Validação de estoque
             if (ModelState.IsValid)
             {
                 var produto = await _context.Produtos.FindAsync(movimentacao.ProdutoId);
@@ -114,12 +121,10 @@ namespace Projeto22025.Controllers
                 }
                 else if (produto.EstoqueAtual < movimentacao.Quantidade)
                 {
-                    // Erro se tentar tirar mais do que tem
                     ModelState.AddModelError("Quantidade", $"Estoque insuficiente. Disponível: {produto.EstoqueAtual}");
                 }
                 else
                 {
-                    // Se tudo estiver OK, subtrai o estoque e salva
                     produto.EstoqueAtual -= movimentacao.Quantidade;
                     _context.Update(produto);
                     _context.Add(movimentacao);
@@ -128,7 +133,7 @@ namespace Projeto22025.Controllers
                 }
             }
 
-            // Se o ModelState for inválido (ou falhar na validação de estoque), recarrega os dropdowns e retorna
+            ViewData["Title"] = "Registrar Saída";
             ViewData["SetorId"] = new SelectList(_context.Setores, "Id", "Nome", movimentacao.SetorId);
             ViewData["ProdutoId"] = new SelectList(_context.Produtos.Where(p => p.EstoqueAtual > 0), "Id", "Nome", movimentacao.ProdutoId);
             return View(movimentacao);
