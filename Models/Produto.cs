@@ -1,30 +1,29 @@
-﻿using Projeto22025.Models;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema; // Para o [NotMapped]
+﻿using System.ComponentModel.DataAnnotations; // <-- Adicione este
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Projeto22025.Models
 {
     public class Produto
     {
-        [Required]
         public int Id { get; set; }
 
         [Required]
-        public string? Nome { get; set; }
-        [Required]
+        public string Nome { get; set; } = string.Empty;
+
+        [Display(Name = "Descrição")] // <-- Nome amigável
         public string? Descricao { get; set; }
-        [Required]
+
+        [Display(Name = "Estoque Atual")] // <-- Nome amigável
         public int EstoqueAtual { get; set; }
 
-        // Relacionamento
+        public string? ImagemUrl { get; set; }
+
+        [Display(Name = "Categoria")] // <-- Nome amigável
         public int CategoriaId { get; set; }
         public Categoria? Categoria { get; set; }
 
-        public string? ImagemUrl { get; set; } // O '?' permite ser nulo
-
-
-        [NotMapped] // Não salvar este campo no banco
-        [Display(Name = "Imagem do Produto")]
+        [NotMapped]
+        [Display(Name = "Imagem")] // <-- Nome amigável
         public IFormFile? ImagemUpload { get; set; }
     }
 }

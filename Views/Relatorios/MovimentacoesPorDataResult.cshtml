@@ -1,0 +1,100 @@
+﻿@model IEnumerable<Projeto22025.Models.Movimentacao>
+
+@{
+    ViewData["Title"] = "Resultado do Extrato";
+    // Recupera as datas do TempData para o botão de exportação
+    var dataInicio = TempData["DataInicio"] as string;
+    var dataFim = TempData["DataFim"] as string;
+}
+
+<h2>Resultado do Extrato</h2>
+<hr />
+
+<div class="mb-3">
+    <button id="btnGerarPdf" class="btn btn-danger">
+        Gerar PDF</Vbutton>
+        <a asp-action="ExportarExtratoExcel"
+           asp-route-dataInicio="@dataInicio"
+           asp-route-dataFim="@dataFim"
+           class="btn btn-success">Gerar Excel</a>
+        <a asp-action="MovimentacoesPorData" class="btn btn-outline-secondary">Voltar ao Filtro</a>
+</div>
+
+<div class="card shadow-sm">
+    <div class="card-body">
+        <table class="table table-sm table-striped table-hover" id="tabelaRelatorio">
+            <thead class="table-dark">
+                <tr>
+                    <th>Data</th>
+                    <th>Produto</th>
+                    <th>Tipo</th>
+                    <th>Qtd.</th>
+                    <th>Setor/Fornecedor</th>
+                    <th>Usuário</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Data.ToString("dd/MM/yyyy")</td>
+                        <td>@item.Produto?.Nome</td>
+                        <td>
+                            @if (item.Tipo == "Entrada")
+                            {
+                                <span class="badge bg-success">@item.Tipo</span>
+                            }
+                            else
+                            {
+                                <span class="badge bg-danger">@item.Tipo</span>
+                            }
+                        </td>
+                        <td>@item.Quantidade</td>
+                        <td>@(item.Tipo == "Entrada" ? item.Fornecedor?.Razaosocial : item.Setor?.Nome)</td>
+                        <td>@item.Usuario?.UserName</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@section Scripts {
+    <!-- Script do PDF (Versão Corrigida) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const { jsPDF } = window.jspdf;
+            document.getElementById('btnGerarPdf').addEventListener('click', function () {
+                const elemento = document.getElementById('tabelaRelatorio');
+                const cabecalho = elemento.querySelector('thead');
+
+                // 1. Remove as classes que estragam o PDF
+                cabecalho.classList.remove('table-dark');
+                elemento.classList.remove('table-striped', 'table-hover', 'table-sm');
+                elemento.classList.add('table-pdf-format'); // Adiciona estilo "limpo"
+
+                html2canvas(elemento).then(canvas => {
+                    const imgData = canvas.toDataURL('image/png');
+                    // 'l' = landscape (paisagem), 'p' = portrait (retrato)
+                    const doc = new jsPDF('l', 'mm', 'a4'); // Paisagem para caber mais colunas
+
+                    const imgProps = doc.getImageProperties(imgData);
+                    const pdfWidth = doc.internal.pageSize.getWidth();
+                    const margemX = 10;
+                    const larguraUtil = pdfWidth - (margemX * 2);
+                    const alturaUtil = (imgProps.height * larguraUtil) / imgProps.width;
+
+                    doc.addImage(imgData, 'PNG', margemX, 10, larguraUtil, alturaUtil);
+                    doc.save('Relatorio_Extrato.pdf');
+
+                    // 2. Devolve as classes originais para a página
+                    cabecalho.classList.add('table-dark');
+                    elemento.classList.add('table-striped', 'table-hover', 'table-sm');
+                    elemento.classList.remove('table-pdf-format');
+                });
+            });
+        });
+    </script>
+}

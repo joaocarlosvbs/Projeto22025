@@ -3,16 +3,136 @@
   "WorkspaceRootPath": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\data\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:data\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\models\\fornecedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:models\\fornecedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\FEMA\\Downloads\\Projeto22025\\Migrations\\20251114221116_VersaoInicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20251114221116_VersaoInicial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\scaffoldingreadme.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:scaffoldingreadme.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\views\\relatorios\\movimentacoespordataresult.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:views\\relatorios\\movimentacoespordataresult.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\views\\relatorios\\movimentacoespordata.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:views\\relatorios\\movimentacoespordata.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\views\\relatorios\\mediasaidaproduto.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:views\\relatorios\\mediasaidaproduto.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\views\\produtos\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:views\\produtos\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\views\\produtos\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:views\\produtos\\delete.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\data\\consultas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:data\\consultas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\controllers\\relatorioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:controllers\\relatorioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\models\\relatorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:models\\relatorio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\views\\movimentacao\\registrarsaida.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:views\\movimentacao\\registrarsaida.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\areas\\identity\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:areas\\identity\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\controllers\\movimentacaocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:controllers\\movimentacaocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\views\\movimentacao\\registrarentrada.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:views\\movimentacao\\registrarentrada.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\models\\movimentacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:models\\movimentacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\areas\\identity\\pages\\account\\manage\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:areas\\identity\\pages\\account\\manage\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\areas\\identity\\pages\\account\\manage\\email.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:areas\\identity\\pages\\account\\manage\\email.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\areas\\identity\\pages\\account\\manage\\email.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:areas\\identity\\pages\\account\\manage\\email.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\areas\\identity\\pages\\account\\manage\\changepassword.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:areas\\identity\\pages\\account\\manage\\changepassword.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\areas\\identity\\pages\\account\\manage\\changepassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:areas\\identity\\pages\\account\\manage\\changepassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\areas\\identity\\pages\\account\\manage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:areas\\identity\\pages\\account\\manage\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\areas\\identity\\pages\\account\\manage\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:areas\\identity\\pages\\account\\manage\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\areas\\identity\\pages\\account\\manage\\_managenav.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:areas\\identity\\pages\\account\\manage\\_managenav.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\views\\produtos\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:views\\produtos\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\models\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:models\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\views\\produtos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:views\\produtos\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\views\\relatorios\\consumoporsetor.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:views\\relatorios\\consumoporsetor.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,111 +143,20 @@
       "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\areas\\identity\\pages\\account\\confirmemail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:areas\\identity\\pages\\account\\confirmemail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\views\\relatorios\\pivot.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:views\\relatorios\\pivot.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\areas\\identity\\pages\\account\\accessdenied.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:areas\\identity\\pages\\account\\accessdenied.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\areas\\identity\\pages\\account\\_statusmessage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:areas\\identity\\pages\\account\\_statusmessage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\areas\\identity\\pages\\account\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:areas\\identity\\pages\\account\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\scaffoldingreadme.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:scaffoldingreadme.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\areas\\identity\\pages\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:areas\\identity\\pages\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\models\\movimentacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:models\\movimentacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\models\\pivot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:models\\pivot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\controllers\\produtoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:controllers\\produtoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\views\\relatorios\\consumoporsetor.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:views\\relatorios\\consumoporsetor.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\controllers\\relatorioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:controllers\\relatorioscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\data\\migrations\\20251112182755_classes.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:data\\migrations\\20251112182755_classes.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\data\\consultas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:data\\consultas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\models\\fornecedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:models\\fornecedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\models\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:models\\produto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\views\\movimentacao\\registrarentrada.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:views\\movimentacao\\registrarentrada.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\controllers\\movimentacaocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:controllers\\movimentacaocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\controllers\\setorescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:controllers\\setorescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\controllers\\fornecedorescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:controllers\\fornecedorescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\controllers\\categoriascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:controllers\\categoriascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\Roslyn\\Microsoft.CSharp.Core.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|c:\\users\\fema\\downloads\\projeto22025\\views\\produtos\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{9B25B971-58D1-4D54-A46B-C945043F797D}|Projeto22025.csproj|solutionrelative:views\\produtos\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -137,128 +166,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Login.cshtml",
-              "ViewState": "AgIAACEAAAAAAAAAAAAuwDQAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-14T15:04:48.722Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Register.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
-              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
-              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
-              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIIAAAA5AAAAAAAAAA==",
+              "Title": "Fornecedor.cs",
+              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Models\\Fornecedor.cs",
+              "RelativeDocumentMoniker": "Models\\Fornecedor.cs",
+              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Models\\Fornecedor.cs",
+              "RelativeToolTip": "Models\\Fornecedor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-14T14:23:33.025Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ConfirmEmail.cshtml",
-              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Areas\\Identity\\Pages\\Account\\ConfirmEmail.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\ConfirmEmail.cshtml",
-              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Areas\\Identity\\Pages\\Account\\ConfirmEmail.cshtml",
-              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\ConfirmEmail.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-14T14:18:51.639Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "_StatusMessage.cshtml",
-              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Areas\\Identity\\Pages\\Account\\_StatusMessage.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\_StatusMessage.cshtml",
-              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Areas\\Identity\\Pages\\Account\\_StatusMessage.cshtml",
-              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\_StatusMessage.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-14T14:18:26.495Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "_ViewImports.cshtml",
-              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Areas\\Identity\\Pages\\Account\\_ViewImports.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\_ViewImports.cshtml",
-              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Areas\\Identity\\Pages\\Account\\_ViewImports.cshtml",
-              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\_ViewImports.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-14T14:18:23.83Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "_LoginPartial.cshtml",
-              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Views\\Shared\\_LoginPartial.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_LoginPartial.cshtml",
-              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Views\\Shared\\_LoginPartial.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_LoginPartial.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-12T20:38:17.206Z",
+              "WhenOpened": "2025-11-15T00:18:48.388Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Login.cshtml.cs",
-              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
-              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
-              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
-              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
-              "ViewState": "AgIAAIEAAAAAAAAAAAAuwJYAAAABAAAAAAAAAA==",
+              "Title": "20251114221116_VersaoInicial.cs",
+              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Migrations\\20251114221116_VersaoInicial.cs",
+              "RelativeDocumentMoniker": "Migrations\\20251114221116_VersaoInicial.cs",
+              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Migrations\\20251114221116_VersaoInicial.cs",
+              "RelativeToolTip": "Migrations\\20251114221116_VersaoInicial.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-14T15:04:42.73Z",
+              "WhenOpened": "2025-11-14T22:11:17.008Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AccessDenied.cshtml",
-              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Areas\\Identity\\Pages\\Account\\AccessDenied.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\AccessDenied.cshtml",
-              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Areas\\Identity\\Pages\\Account\\AccessDenied.cshtml",
-              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\AccessDenied.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-14T14:17:47.023Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-14T14:15:44.311Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 3,
               "Title": "ScaffoldingReadMe.txt",
               "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\ScaffoldingReadMe.txt",
               "RelativeDocumentMoniker": "ScaffoldingReadMe.txt",
@@ -266,7 +204,215 @@
               "RelativeToolTip": "ScaffoldingReadMe.txt",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-11-14T14:15:14.103Z",
+              "WhenOpened": "2025-11-14T22:03:00.529Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DbInitializer.cs",
+              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Data\\DbInitializer.cs",
+              "RelativeDocumentMoniker": "Data\\DbInitializer.cs",
+              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Data\\DbInitializer.cs",
+              "RelativeToolTip": "Data\\DbInitializer.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA5wBQAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T21:51:58.398Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "MovimentacoesPorDataResult.cshtml",
+              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Views\\Relatorios\\MovimentacoesPorDataResult.cshtml",
+              "RelativeDocumentMoniker": "Views\\Relatorios\\MovimentacoesPorDataResult.cshtml",
+              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Views\\Relatorios\\MovimentacoesPorDataResult.cshtml",
+              "RelativeToolTip": "Views\\Relatorios\\MovimentacoesPorDataResult.cshtml",
+              "ViewState": "AgIAACkAAAAAAAAAAAAewDQAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-14T21:41:59.15Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MovimentacoesPorData.cshtml",
+              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Views\\Relatorios\\MovimentacoesPorData.cshtml",
+              "RelativeDocumentMoniker": "Views\\Relatorios\\MovimentacoesPorData.cshtml",
+              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Views\\Relatorios\\MovimentacoesPorData.cshtml",
+              "RelativeToolTip": "Views\\Relatorios\\MovimentacoesPorData.cshtml",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAqwCAAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-14T21:41:43.656Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T18:19:18.97Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MediaSaidaProduto.cshtml",
+              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Views\\Relatorios\\MediaSaidaProduto.cshtml",
+              "RelativeDocumentMoniker": "Views\\Relatorios\\MediaSaidaProduto.cshtml",
+              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Views\\Relatorios\\MediaSaidaProduto.cshtml",
+              "RelativeToolTip": "Views\\Relatorios\\MediaSaidaProduto.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-14T21:40:27.659Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Delete.cshtml",
+              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Views\\Produtos\\Delete.cshtml",
+              "RelativeDocumentMoniker": "Views\\Produtos\\Delete.cshtml",
+              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Views\\Produtos\\Delete.cshtml",
+              "RelativeToolTip": "Views\\Produtos\\Delete.cshtml",
+              "ViewState": "AgIAACgAAAAAAAAAAAAewDMAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-14T19:26:57.499Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Views\\Produtos\\Details.cshtml",
+              "RelativeDocumentMoniker": "Views\\Produtos\\Details.cshtml",
+              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Views\\Produtos\\Details.cshtml",
+              "RelativeToolTip": "Views\\Produtos\\Details.cshtml",
+              "ViewState": "AgIAACgAAAAAAAAAAAAewDMAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-14T19:26:17.168Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Relatorio.cs",
+              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Models\\Relatorio.cs",
+              "RelativeDocumentMoniker": "Models\\Relatorio.cs",
+              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Models\\Relatorio.cs",
+              "RelativeToolTip": "Models\\Relatorio.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T21:28:00.767Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-14T20:17:49.205Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Email.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml.cs",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml.cs",
+              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml.cs",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml.cs",
+              "ViewState": "AgIAAJsAAAAAAAAAAAAswEgAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T19:40:23.171Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Movimentacao.cs",
+              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Models\\Movimentacao.cs",
+              "RelativeDocumentMoniker": "Models\\Movimentacao.cs",
+              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Models\\Movimentacao.cs",
+              "RelativeToolTip": "Models\\Movimentacao.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T19:57:06.38Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Consultas.cs",
+              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Data\\Consultas.cs",
+              "RelativeDocumentMoniker": "Data\\Consultas.cs",
+              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Data\\Consultas.cs",
+              "RelativeToolTip": "Data\\Consultas.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAMwCYAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T17:30:00.898Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "RelatoriosController.cs",
+              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Controllers\\RelatoriosController.cs",
+              "RelativeDocumentMoniker": "Controllers\\RelatoriosController.cs",
+              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Controllers\\RelatoriosController.cs",
+              "RelativeToolTip": "Controllers\\RelatoriosController.cs",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAkwIoAAABKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T17:33:02.318Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "RegistrarEntrada.cshtml",
+              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Views\\Movimentacao\\RegistrarEntrada.cshtml",
+              "RelativeDocumentMoniker": "Views\\Movimentacao\\RegistrarEntrada.cshtml",
+              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Views\\Movimentacao\\RegistrarEntrada.cshtml",
+              "RelativeToolTip": "Views\\Movimentacao\\RegistrarEntrada.cshtml",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAADAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-14T17:09:21.212Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "wwwroot\\css\\site.css",
+              "ViewState": "AgIAACAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-14T20:17:08.547Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "_LoginPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_LoginPartial.cshtml",
+              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_LoginPartial.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAUwBwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-14T21:23:08.52Z",
               "EditorCaption": ""
             },
             {
@@ -277,266 +423,257 @@
               "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
               "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Views\\Shared\\_Layout.cshtml",
               "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAADYAAAAAAAAAAAAAADMAAAA4AAAAAAAAAA==",
+              "ViewState": "AgIAAHoAAAAAAAAAAAAUwI0AAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-12T20:38:21.334Z",
+              "WhenOpened": "2025-11-14T16:42:44.521Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAA0wAgAAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T20:41:30.386Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAABUAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T18:39:33.32Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "ConsumoPorSetor.cshtml",
-              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Views\\Relatorios\\ConsumoPorSetor.cshtml",
-              "RelativeDocumentMoniker": "Views\\Relatorios\\ConsumoPorSetor.cshtml",
-              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Views\\Relatorios\\ConsumoPorSetor.cshtml",
-              "RelativeToolTip": "Views\\Relatorios\\ConsumoPorSetor.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-14T12:35:53.477Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "_ViewStart.cshtml",
-              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
-              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\_ViewStart.cshtml",
-              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
-              "RelativeToolTip": "Areas\\Identity\\Pages\\_ViewStart.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-12T20:37:54.75Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "ProdutosController.cs",
-              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Controllers\\ProdutosController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ProdutosController.cs",
-              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Controllers\\ProdutosController.cs",
-              "RelativeToolTip": "Controllers\\ProdutosController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T18:33:35.629Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Movimentacao.cs",
-              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Models\\Movimentacao.cs",
-              "RelativeDocumentMoniker": "Models\\Movimentacao.cs",
-              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Models\\Movimentacao.cs",
-              "RelativeToolTip": "Models\\Movimentacao.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAA4wA4AAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T14:23:18.097Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Consultas.cs",
-              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Data\\Consultas.cs",
-              "RelativeDocumentMoniker": "Data\\Consultas.cs",
-              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Data\\Consultas.cs",
-              "RelativeToolTip": "Data\\Consultas.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAIAwwBsAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T14:28:48.163Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Fornecedor.cs",
-              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Models\\Fornecedor.cs",
-              "RelativeDocumentMoniker": "Models\\Fornecedor.cs",
-              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Models\\Fornecedor.cs",
-              "RelativeToolTip": "Models\\Fornecedor.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-14T12:54:42.618Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 17,
-              "Title": "RelatoriosController.cs",
-              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Controllers\\RelatoriosController.cs",
-              "RelativeDocumentMoniker": "Controllers\\RelatoriosController.cs",
-              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Controllers\\RelatoriosController.cs",
-              "RelativeToolTip": "Controllers\\RelatoriosController.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAowB0AAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T18:35:39.194Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Produto.cs",
-              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Models\\Produto.cs",
-              "RelativeDocumentMoniker": "Models\\Produto.cs",
-              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Models\\Produto.cs",
-              "RelativeToolTip": "Models\\Produto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-14T12:54:59.388Z"
+              "Title": "RegistrarSaida.cshtml",
+              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Views\\Movimentacao\\RegistrarSaida.cshtml",
+              "RelativeDocumentMoniker": "Views\\Movimentacao\\RegistrarSaida.cshtml",
+              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Views\\Movimentacao\\RegistrarSaida.cshtml",
+              "RelativeToolTip": "Views\\Movimentacao\\RegistrarSaida.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-14T17:13:00.595Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 18,
-              "Title": "20251112182755_classes.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Data\\Migrations\\20251112182755_classes.Designer.cs",
-              "RelativeDocumentMoniker": "Data\\Migrations\\20251112182755_classes.Designer.cs",
-              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Data\\Migrations\\20251112182755_classes.Designer.cs",
-              "RelativeToolTip": "Data\\Migrations\\20251112182755_classes.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-14T12:56:57.75Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Usuario.cs",
-              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Models\\Usuario.cs",
-              "RelativeDocumentMoniker": "Models\\Usuario.cs",
-              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Models\\Usuario.cs",
-              "RelativeToolTip": "Models\\Usuario.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-14T13:18:24.922Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "RegistrarEntrada.cshtml",
-              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Views\\Movimentacao\\RegistrarEntrada.cshtml",
-              "RelativeDocumentMoniker": "Views\\Movimentacao\\RegistrarEntrada.cshtml",
-              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Views\\Movimentacao\\RegistrarEntrada.cshtml",
-              "RelativeToolTip": "Views\\Movimentacao\\RegistrarEntrada.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-14T12:31:50.962Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
               "Title": "MovimentacaoController.cs",
               "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Controllers\\MovimentacaoController.cs",
               "RelativeDocumentMoniker": "Controllers\\MovimentacaoController.cs",
               "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Controllers\\MovimentacaoController.cs",
               "RelativeToolTip": "Controllers\\MovimentacaoController.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAAAEEAAABAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T18:35:08.541Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "SetoresController.cs",
-              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Controllers\\SetoresController.cs",
-              "RelativeDocumentMoniker": "Controllers\\SetoresController.cs",
-              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Controllers\\SetoresController.cs",
-              "RelativeToolTip": "Controllers\\SetoresController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T14:53:02.922Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "FornecedoresController.cs",
-              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Controllers\\FornecedoresController.cs",
-              "RelativeDocumentMoniker": "Controllers\\FornecedoresController.cs",
-              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Controllers\\FornecedoresController.cs",
-              "RelativeToolTip": "Controllers\\FornecedoresController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T14:41:53.373Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "CategoriasController.cs",
-              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Controllers\\CategoriasController.cs",
-              "RelativeDocumentMoniker": "Controllers\\CategoriasController.cs",
-              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Controllers\\CategoriasController.cs",
-              "RelativeToolTip": "Controllers\\CategoriasController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T14:35:08.49Z"
+              "WhenOpened": "2025-11-14T17:08:21.152Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 28,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-11-13T19:54:14.969Z"
+              "Title": "_ManageNav.cshtml",
+              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml",
+              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-14T19:32:45.904Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
+              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-14T19:33:33.947Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml.cs",
+              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml.cs",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Manage\\Index.cshtml.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAcwHcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T19:33:42.618Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "ChangePassword.cshtml",
+              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml",
+              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml",
+              "ViewState": "AgIAABAAAAAAAAAAAAAUwCQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-14T19:37:15.086Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ChangePassword.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml.cs",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml.cs",
+              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml.cs",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Manage\\ChangePassword.cshtml.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAYwHoAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T19:37:46.531Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Email.cshtml",
+              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml",
+              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Manage\\Email.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-14T19:39:55.55Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Areas\\Identity\\Pages\\Account\\Manage\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Manage\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Areas\\Identity\\Pages\\Account\\Manage\\_Layout.cshtml",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Manage\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-14T19:32:10.652Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 30,
-              "Title": "Microsoft.CSharp.Core.targets",
-              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\Roslyn\\Microsoft.CSharp.Core.targets",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\Roslyn\\Microsoft.CSharp.Core.targets",
-              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\Roslyn\\Microsoft.CSharp.Core.targets",
-              "RelativeToolTip": "..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\Roslyn\\Microsoft.CSharp.Core.targets",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2025-11-13T18:42:39.312Z"
+              "Title": "Produto.cs",
+              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Models\\Produto.cs",
+              "RelativeDocumentMoniker": "Models\\Produto.cs",
+              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Models\\Produto.cs",
+              "RelativeToolTip": "Models\\Produto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T19:24:24.625Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Register.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAKwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T19:14:35.991Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "ConsumoPorSetor.cshtml",
+              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Views\\Relatorios\\ConsumoPorSetor.cshtml",
+              "RelativeDocumentMoniker": "Views\\Relatorios\\ConsumoPorSetor.cshtml",
+              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Views\\Relatorios\\ConsumoPorSetor.cshtml",
+              "RelativeToolTip": "Views\\Relatorios\\ConsumoPorSetor.cshtml",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-14T18:54:30.29Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 29,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAowAAAAAAAAAAAAAAAAA==",
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Views\\Produtos\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Views\\Produtos\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Views\\Produtos\\Edit.cshtml",
+              "RelativeToolTip": "Views\\Produtos\\Edit.cshtml",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAUwEsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-14T18:20:18.438Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "Pivot.cs",
+              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Models\\Pivot.cs",
+              "RelativeDocumentMoniker": "Models\\Pivot.cs",
+              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Models\\Pivot.cs",
+              "RelativeToolTip": "Models\\Pivot.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T19:51:21.165Z"
+              "WhenOpened": "2025-11-14T17:28:27.411Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "Pivot.cshtml",
+              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Views\\Relatorios\\Pivot.cshtml",
+              "RelativeDocumentMoniker": "Views\\Relatorios\\Pivot.cshtml",
+              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Views\\Relatorios\\Pivot.cshtml",
+              "RelativeToolTip": "Views\\Relatorios\\Pivot.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-14T17:32:00.267Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 31,
-              "Title": "_ValidationScriptsPartial.cshtml",
-              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Views\\Produtos\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Produtos\\Index.cshtml",
+              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Views\\Produtos\\Index.cshtml",
+              "RelativeToolTip": "Views\\Produtos\\Index.cshtml",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAEMAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-14T17:35:17.393Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeToolTip": "Areas\\Identity\\Pages\\Account\\Register.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-12T20:38:25.836Z"
+              "WhenOpened": "2025-11-14T19:14:34.061Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "ProdutosController.cs",
+              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Controllers\\ProdutosController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProdutosController.cs",
+              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Controllers\\ProdutosController.cs",
+              "RelativeToolTip": "Controllers\\ProdutosController.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAcwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-14T16:55:52.671Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Views\\Produtos\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Produtos\\Create.cshtml",
+              "ToolTip": "C:\\Users\\FEMA\\Downloads\\Projeto22025\\Views\\Produtos\\Create.cshtml",
+              "RelativeToolTip": "Views\\Produtos\\Create.cshtml",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAAACoAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-14T16:53:56.543Z",
+              "EditorCaption": ""
             }
           ]
         }

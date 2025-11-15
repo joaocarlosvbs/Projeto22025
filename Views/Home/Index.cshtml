@@ -1,8 +1,50 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@using Microsoft.AspNetCore.Authorization
+@{
+    ViewData["Title"] = "Página Inicial";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<!-- Hero (centralizado) -->
+<div class="home-hero p-5 mb-4 rounded-3 text-white shadow-lg text-center">
+    <div class="container-fluid py-5">
+        <h1 class="display-5 fw-bold">Sistema de Controle de Estoque</h1>
+        <p class="col-md-10 fs-4 mx-auto">Gerencie as entradas, saídas e o inventário do almoxarifado de forma centralizada.</p>
+    </div>
+</div>
+
+<!-- Cards (centralizados) -->
+<div class="row align-items-md-stretch justify-content-center">
+
+    <!-- Card 1: Ver Estoque (MUDANÇA: col-md-6 -> col-md-4) -->
+    <AuthorizeView Roles="Almoxarife, Servidor">
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 p-5 bg-light border-0 shadow-sm">
+                <h2><i class="bi bi-box-seam"></i> Ver Estoque</h2>
+                <p>Consulte a lista completa de produtos e quantidades disponíveis.</p>
+                <a class="btn btn-outline-primary" asp-controller="Produtos" asp-action="Index">Acessar Estoque <i class="bi bi-arrow-right-short"></i></a>
+            </div>
+        </div>
+    </AuthorizeView>
+
+    <!-- Card 2: Registrar Saída (MUDANÇA: col-md-6 -> col-md-4) -->
+    <AuthorizeView Roles="Almoxarife">
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 p-5 bg-primary text-white border-0 shadow-sm">
+                <h2><i class="bi bi-box-arrow-up-right"></i> Registrar Saída</h2>
+                <p>Abra o formulário para registrar a saída de um material para um setor.</p>
+                <a class="btn btn-light" asp-controller="Movimentacao" asp-action="RegistrarSaida">Registrar Saída <i class="bi bi-arrow-right-short"></i></a>
+            </div>
+        </div>
+    </AuthorizeView>
+
+    <!-- Card 3: Ver Relatórios (MUDANÇA: col-md-6 -> col-md-4) -->
+    <AuthorizeView Roles="Almoxarife">
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 p-5 bg-white border-0 shadow-sm">
+                <h2><i class="bi bi-file-earmark-bar-graph"></i> Relatórios</h2>
+                <p>Acesse os relatórios de consumo, pivot e extratos de movimentação.</p>
+                <a class="btn btn-outline-secondary" asp-controller="Relatorios" asp-action="ConsumoPorSetor">Ver Relatórios <i class="bi bi-arrow-right-short"></i></a>
+            </div>
+        </div>
+    </AuthorizeView>
+
 </div>

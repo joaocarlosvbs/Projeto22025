@@ -1,0 +1,61 @@
+﻿@* ESTA LINHA É A MAIS IMPORTANTE. 
+    Ela diz ao Razor para processar este arquivo como um template
+    para uma lista de objetos 'Pivot'.
+*@
+@model IEnumerable<Projeto22025.Models.Pivot>
+
+@{
+    ViewData["Title"] = "Relatório Pivot";
+}
+
+<h2>Relatório Pivot (Setor vs Categoria)</h2>
+
+<div class="mb-3">
+    <!-- O botão de PDF (via JS) -->
+    <button id="btnGerarPdf" class="btn btn-danger">Gerar PDF</button>
+    <!-- O botão de Excel (via Controller) -->
+    <a asp-action="ExportarPivotExcel" class="btn btn-success">Gerar Excel</a>
+</div>
+
+<table class="table table-striped table-bordered" id="tabelaRelatorio">
+    <thead class="table-dark">
+        <tr>
+            <th>Setor (Eixo 1)</th>
+            <th>Categoria (Eixo 2)</th>
+            <th>Total Consumido</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.GrupoEixo1</td>
+                <td>@item.GrupoEixo2</td>
+                <td>@item.Total</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section Scripts {
+    <!-- Script para gerar PDF no navegador -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const { jsPDF } = window.jspdf;
+            document.getElementById('btnGerarPdf').addEventListener('click', function () {
+                const elemento = document.getElementById('tabelaRelatorio');
+                html2canvas(elemento).then(canvas => {
+                    const imgData = canvas.toDataURL('image/png');
+                    const doc = new jsPDF('p', 'mm', 'a4');
+                    const imgProps = doc.getImageProperties(imgData);
+                    const pdfWidth = doc.internal.pageSize.getWidth();
+                    const pdfHeight = (imgProps.height * pdfWidth) / imgProps.width;
+                    doc.addImage(imgData, 'PNG', 10, 10, pdfWidth - 20, pdfHeight - 20);
+                    doc.save('Relatorio_Pivot.pdf');
+                });
+            });
+        });
+    </script>
+}

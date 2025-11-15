@@ -1,0 +1,33 @@
+﻿@* Esta é a View com o formulário de filtro *@
+@model dynamic
+
+@{
+    ViewData["Title"] = "Extrato por Data";
+}
+
+<h2>Extrato de Movimentações por Data</h2>
+<p>Selecione um período para gerar o extrato de entradas e saídas.</p>
+<hr />
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card shadow-sm">
+            <div class="card-header"><h4 class="mb-0">Filtrar Período</h4></div>
+            <div class="card-body">
+                <form asp-action="MovimentacoesPorData" method="post">
+                    <div class="form-group mb-3">
+                        <label for="dataInicio" class="control-label">Data Início</label>
+                        <input name="dataInicio" class="form-control" type="date" value="@Model.DataInicio.ToString("yyyy-MM-dd")" />
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="dataFim" class="control-label">Data Fim</label>
+                        <input name="dataFim" class="form-control" type="date" value="@Model.DataFim.ToString("yyyy-MM-dd")" />
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Filtrar" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

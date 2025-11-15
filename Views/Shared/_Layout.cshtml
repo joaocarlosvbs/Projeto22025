@@ -1,4 +1,4 @@
-﻿@using Microsoft.AspNetCore.Authorization <!-- ADICIONADO: Para a tag <AuthorizeView> funcionar -->
+﻿@using Microsoft.AspNetCore.Authorization
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -7,40 +7,73 @@
     <title>@ViewData["Title"] - Projeto22025</title>
     <script type="importmap"></script>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Projeto22025.styles.css" asp-append-version="true" />
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Projeto22025</a>
+
+                <!-- MUDANÇA: GIF ADICIONADO AO TÍTULO -->
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3Ztamh0cThsZmdmdWJjOXBoc3h5dHpkaDYxNm5yN3Y3cWY2dnRzZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/Lqpsk1QBLkR9e/giphy.gif"
+                         alt="Logo" class="navbar-logo">
+                    Controle de Estoque
+                </a>
+
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
+
+                <!-- MUDANÇA: 'justify-content-between' REMOVIDO para permitir centralização -->
+                <div class="navbar-collapse collapse d-sm-inline-flex">
+
+                    <!-- MUDANÇA: 'flex-grow-1' REMOVIDO e 'mx-auto' ADICIONADO para centralizar o menu -->
+                    <ul class="navbar-nav mx-auto">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index"><i class="bi bi-house-door"></i> Home</a>
                         </li>
 
-                        <!-- ==== INÍCIO DA ADIÇÃO ==== -->
-                        <!-- Esta tag garante que SÓ usuários na role "Almoxarife" vejam estes links -->
+                        <AuthorizeView Roles="Almoxarife, Servidor">
+                            <li class="nav-item">
+                                <a class="nav-link text-light" asp-controller="Produtos" asp-action="Index"><i class="bi bi-box-seam"></i> Estoque</a>
+                            </li>
+                        </AuthorizeView>
+
                         <AuthorizeView Roles="Almoxarife">
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-controller="Produtos" asp-action="Index">Estoque</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link text-dark" asp-controller="Relatorios" asp-action="ConsumoPorSetor">Relatórios</a>
-                            </li>
-                            <!-- Item de menu Dropdown para "Cadastros" -->
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Cadastros
+                                <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="bi bi-arrows-expand"></i> Movimentação
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" asp-controller="Movimentacao" asp-action="RegistrarEntrada"><i class="bi bi-box-arrow-in-down"></i> Registrar Entrada</a></li>
+                                    <li><a class="dropdown-item" asp-controller="Movimentacao" asp-action="RegistrarSaida"><i class="bi bi-box-arrow-up-right"></i> Registrar Saída</a></li>
+                                </ul>
+                            </li>
+                        </AuthorizeView>
+
+                        <AuthorizeView Roles="Almoxarife">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="bi bi-file-earmark-bar-graph"></i> Relatórios
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" asp-controller="Relatorios" asp-action="ConsumoPorSetor">Consumo por Setor</a></li>
+                                    <li><a class="dropdown-item" asp-controller="Relatorios" asp-action="Pivot">Pivot Setor/Categoria</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" asp-controller="Relatorios" asp-action="MovimentacoesPorData">Extrato por Data</a></li>
+                                    <li><a class="dropdown-item" asp-controller="Relatorios" asp-action="MediaSaidaProduto">Média de Saídas</a></li>
+                                </ul>
+                            </li>
+                        </AuthorizeView>
+
+                        <AuthorizeView Roles="Almoxarife">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="bi bi-pencil-square"></i> Cadastros
                                 </a>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" asp-controller="Categorias" asp-action="Index">Categorias</a></li>
@@ -49,10 +82,12 @@
                                 </ul>
                             </li>
                         </AuthorizeView>
-                        <!-- ==== FIM DA ADIÇÃO ==== -->
-
                     </ul>
-                    <partial name="_LoginPartial" />
+
+                    <!-- MUDANÇA: Botões de Login/Logout agora ficam no final -->
+                    <div class="navbar-nav ms-auto">
+                        <partial name="_LoginPartial" />
+                    </div>
                 </div>
             </div>
         </nav>
@@ -63,11 +98,42 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <!-- MUDANÇA: 'border-top' REMOVIDO para tirar o risco -->
+    <footer class="footer text-muted">
         <div class="container">
-            &copy; 2025 - Projeto22025 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <!-- Conteúdo do footer removido, conforme solicitado -->
         </div>
     </footer>
+
+    <!-- Botão e Modal de Créditos (Sem alteração) -->
+    <button class="btn-creditos" data-bs-toggle="modal" data-bs-target="#creditosModal" title="Créditos">
+        Créditos
+    </button>
+    <div class="modal fade" id="creditosModal" tabindex="-1" aria-labelledby="creditosModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="creditosModalLabel">Créditos do Projeto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p><strong>Trabalho de Linguagem de Programação 2° Semestre</strong></p>
+                    <p>
+                        <strong>Aluno:</strong> João Carlos ... <br />
+                        <strong>RA:</strong> ...
+                    </p>
+                    <hr />
+                    <p>Agradecimentos ao Professor Almir pela paciência e instrução.</p>
+                    <p class="text-muted">2° Ano de Ciência da Computação - FEMA</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

@@ -1,55 +1,76 @@
-﻿@model Produto
+﻿@model Projeto22025.Models.Produto
 
 @{
     ViewData["Title"] = "Edit";
-    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Edit</h1>
+<h1>Editar Produto</h1>
 
-<h4>Produto</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="Edit">
+
+        <!-- INÍCIO DA ADIÇÃO DA IMAGEM (Apenas visualização) -->
+        <div class="form-group mb-3">
+            <label class="control-label">Imagem Atual</label>
+            <div>
+                @if (!string.IsNullOrEmpty(Model.ImagemUrl))
+                {
+                    <img src="@Model.ImagemUrl" alt="Imagem do produto" style="width:150px; height:auto; border-radius: 8px;" />
+                }
+                else
+                {
+                    <img src="~/imagens/placeholder.png" alt="Sem imagem" style="width:150px; height:auto; border-radius: 8px;" />
+                }
+            </div>
+        </div>
+        <!-- FIM DA ADIÇÃO DA IMAGEM -->
+
+        <form asp-action="Edit" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Id" />
-            <div class="form-group">
+
+            <!-- Precisamos manter a URL antiga se nenhuma imagem nova for enviada -->
+            <input type="hidden" asp-for="ImagemUrl" />
+
+            <div class="form-group mb-3">
                 <label asp-for="Nome" class="control-label"></label>
                 <input asp-for="Nome" class="form-control" />
                 <span asp-validation-for="Nome" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group mb-3">
                 <label asp-for="Descricao" class="control-label"></label>
                 <input asp-for="Descricao" class="form-control" />
                 <span asp-validation-for="Descricao" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group mb-3">
                 <label asp-for="EstoqueAtual" class="control-label"></label>
                 <input asp-for="EstoqueAtual" class="form-control" />
                 <span asp-validation-for="EstoqueAtual" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group mb-3">
                 <label asp-for="CategoriaId" class="control-label"></label>
                 <select asp-for="CategoriaId" class="form-control" asp-items="ViewBag.CategoriaId"></select>
                 <span asp-validation-for="CategoriaId" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="ImagemUrl" class="control-label"></label>
-                <input asp-for="ImagemUrl" class="form-control" />
-                <span asp-validation-for="ImagemUrl" class="text-danger"></span>
+
+            <!-- Campo para enviar UMA NOVA imagem -->
+            <div class="form-group mb-3">
+                <label asp-for="ImagemUpload" class="control-label">(Trocar Imagem)</label>
+                <input asp-for="ImagemUpload" class="form-control" type="file" accept="image/png, image/jpeg, image/gif" />
+                <span asp-validation-for="ImagemUpload" class="text-danger"></span>
             </div>
+
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Salvar" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-outline-secondary">Cancelar</a>
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

@@ -70,7 +70,7 @@ namespace Projeto22025.Areas.Identity.Pages.Account.Manage
             /// </summary>
             [Required]
             [EmailAddress]
-            [Display(Name = "New email")]
+            [Display(Name = "Novo e-mail")]
             public string NewEmail { get; set; }
         }
 

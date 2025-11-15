@@ -7,7 +7,7 @@
         <form asp-action="RegistrarEntrada">
 
             <div class="form-group mb-3">
-                <label asp-for="ProdutoId" class="control-label">Produto</label>
+                <label asp-for="ProdutoId" class="control-label"></label>
                 <select asp-for="ProdutoId" class="form-control" asp-items="ViewBag.ProdutoId">
                     <option value="">-- Selecione --</option>
                 </select>
@@ -15,7 +15,7 @@
             </div>
 
             <div class="form-group mb-3">
-                <label asp-for="FornecedorId" class="control-label">Fornecedor</label>
+                <label asp-for="FornecedorId" class="control-label"></label>
                 <select asp-for="FornecedorId" class="form-control" asp-items="ViewBag.FornecedorId">
                     <option value="">-- Selecione --</option>
                 </select>
@@ -28,9 +28,22 @@
                 <span asp-validation-for="Quantidade" class="text-danger"></span>
             </div>
 
+            <!-- CAMPO DE DATA ADICIONADO -->
+            <div class="form-group mb-3">
+                <label asp-for="Data" class="control-label"></label>
+                <input asp-for="Data" class="form-control" type="date" />
+                <span asp-validation-for="Data" class="text-danger"></span>
+            </div>
+
             <div class="form-group">
                 <input type="submit" value="Registrar Entrada" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

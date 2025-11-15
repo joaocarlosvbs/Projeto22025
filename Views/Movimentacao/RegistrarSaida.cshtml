@@ -1,0 +1,60 @@
+﻿@model Projeto22025.Models.Movimentacao
+
+@{
+    ViewData["Title"] = "Registrar Saída";
+}
+
+<h2>Registrar Saída de Material</h2>
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="RegistrarSaida">
+            <!--
+                Mostra o sumário de erros. É aqui que a mensagem
+                "Estoque insuficiente..." do controller vai aparecer.
+            -->
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group mb-3">
+                <label asp-for="ProdutoId" class="control-label"></label>
+                <select asp-for="ProdutoId" class="form-control" asp-items="ViewBag.ProdutoId">
+                    <option value="">-- Selecione um Produto --</option>
+                </select>
+                <span asp-validation-for="ProdutoId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="SetorId" class="control-label"></label>
+                <select asp-for="SetorId" class="form-control" asp-items="ViewBag.SetorId">
+                    <option value="">-- Selecione um Setor --</option>
+                </select>
+                <span asp-validation-for="SetorId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group mb-3">
+                <label asp-for="Quantidade" class="control-label"></label>
+                <input asp-for="Quantidade" class="form-control" type="number" min="1" />
+                <!-- Aqui também aparecerá a mensagem "Estoque insuficiente..." -->
+                <span asp-validation-for="Quantidade" class="text-danger"></span>
+            </div>
+
+            <!-- Este é o campo de Data que adicionamos -->
+            <div class="form-group mb-3">
+                <label asp-for="Data" class="control-label"></label>
+                <input asp-for="Data" class="form-control" type="date" />
+                <span asp-validation-for="Data" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Registrar Saída" class="btn btn-primary" />
+                <a asp-controller="Produtos" asp-action="Index" class="btn btn-outline-secondary">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -4,11 +4,14 @@ namespace Projeto22025.Models
 {
     public class Fornecedor
     {
-        [Required]
         public int Id { get; set; }
+
         [Required]
-        public string ? Razaosocial { get; set; }
-        [Required]
-        public string ? Cnpj { get; set; }
+        [Display(Name = "Razão Social")]
+        public string Razaosocial { get; set; } = string.Empty;
+
+        // A MUDANÇA IMPORTANTE É O 'string?' (permitir nulo)
+        [Display(Name = "CNPJ")]
+        public string? Cnpj { get; set; }
     }
 }

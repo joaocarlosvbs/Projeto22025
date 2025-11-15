@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Projeto22025.Models;
+using Projeto22025.Models; // <-- Verifique se 'Usuario' está aqui
 
 namespace Projeto22025.Areas.Identity.Pages.Account.Manage
 {
@@ -30,6 +30,7 @@ namespace Projeto22025.Areas.Identity.Pages.Account.Manage
         ///     This API supports the ASP.NET Core Identity default UI infrastructure and is not intended to be used
         ///     directly from your code. This API may change or be removed in future releases.
         /// </summary>
+        [Display(Name = "Nome de Usuário")] // <-- Traduzido
         public string Username { get; set; }
 
         /// <summary>
@@ -57,7 +58,7 @@ namespace Projeto22025.Areas.Identity.Pages.Account.Manage
             ///     directly from your code. This API may change or be removed in future releases.
             /// </summary>
             [Phone]
-            [Display(Name = "Phone number")]
+            [Display(Name = "Número de Telefone")] // <-- Traduzido
             public string PhoneNumber { get; set; }
         }
 
@@ -79,7 +80,7 @@ namespace Projeto22025.Areas.Identity.Pages.Account.Manage
             var user = await _userManager.GetUserAsync(User);
             if (user == null)
             {
-                return NotFound($"Unable to load user with ID '{_userManager.GetUserId(User)}'.");
+                return NotFound($"Não foi possível carregar o usuário com ID '{_userManager.GetUserId(User)}'."); // <-- Traduzido
             }
 
             await LoadAsync(user);
@@ -91,7 +92,7 @@ namespace Projeto22025.Areas.Identity.Pages.Account.Manage
             var user = await _userManager.GetUserAsync(User);
             if (user == null)
             {
-                return NotFound($"Unable to load user with ID '{_userManager.GetUserId(User)}'.");
+                return NotFound($"Não foi possível carregar o usuário com ID '{_userManager.GetUserId(User)}'."); // <-- Traduzido
             }
 
             if (!ModelState.IsValid)
@@ -106,13 +107,13 @@ namespace Projeto22025.Areas.Identity.Pages.Account.Manage
                 var setPhoneResult = await _userManager.SetPhoneNumberAsync(user, Input.PhoneNumber);
                 if (!setPhoneResult.Succeeded)
                 {
-                    StatusMessage = "Unexpected error when trying to set phone number.";
+                    StatusMessage = "Erro inesperado ao tentar definir o número de telefone."; // <-- Traduzido
                     return RedirectToPage();
                 }
             }
 
             await _signInManager.RefreshSignInAsync(user);
-            StatusMessage = "Your profile has been updated";
+            StatusMessage = "Seu perfil foi atualizado"; // <-- Traduzido
             return RedirectToPage();
         }
     }

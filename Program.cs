@@ -1,25 +1,26 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Projeto22025.Data;
-using Projeto22025.Models; // <-- Para ApplicationUser
+using Projeto22025.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// 1. Configurar Connection String
+// 1. VOLTAMOS A USAR A CONNECTION STRING "conexao"
 var connectionString = builder.Configuration.GetConnectionString("conexao") ?? throw new InvalidOperationException("Connection string 'conexao' not found.");
+
+// 2. MUDAMOS DE UseSqlite DE VOLTA PARA UseSqlServer
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-// 2. Configurar Identity Customizado
+// 3. Configurar Identity Customizado
 builder.Services.AddDefaultIdentity<Usuario>(options => options.SignIn.RequireConfirmedAccount = false)
     .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
 
-// 3. Configurar Servi�os
+// 4. Configurar Serviços
 builder.Services.AddControllersWithViews();
-builder.Services.AddScoped<Consultas>(); // Registra sua classe de consulta
-//Rotativa.AspNetCore.RotativaConfiguration.Setup(builder.Environment.WebRootPath, "Rotativa"); // Registra o PDF
+builder.Services.AddScoped<Consultas>();
 
 var app = builder.Build();
 
@@ -27,6 +28,9 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseMigrationsEndPoint();
+
+    // O "DbInitializer" (semeador) funciona com SQL Server também
+    await DbInitializer.SeedDatabase(app);
 }
 else
 {
@@ -39,7 +43,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
-app.UseAuthentication(); // <-- Adicionado (Se j� n�o estava)
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(

@@ -2,13 +2,11 @@
 // The .NET Foundation licenses this file to you under the MIT license.
 #nullable disable
 
-using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Text.Encodings.Web;
-using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
@@ -53,7 +51,7 @@ namespace Projeto22025.Areas.Identity.Pages.Account
 
         public IList<AuthenticationScheme> ExternalLogins { get; set; }
 
-        // O SEU INPUTMODEL JÁ ESTAVA CORRETO!
+        // O seu InputModel (já está correto)
         public class InputModel
         {
             [Required(ErrorMessage = "O nome de usuário é obrigatório.")]
@@ -90,33 +88,32 @@ namespace Projeto22025.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
         }
 
-        // --- ESTE É O MÉTODO CORRIGIDO ---
+        // Método OnPostAsync (com a linha adicionada)
         public async Task<IActionResult> OnPostAsync(string returnUrl = null)
         {
             returnUrl ??= Url.Content("~/");
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
-                // var user = CreateUser(); // <-- MUDANÇA 1: Substituímos o helper
-
-                // --- MUDANÇA 2: Criamos o usuário e preenchemos TODOS os campos ---
+                // Cria o usuário com os dados do formulário
                 var user = new Usuario
                 {
-                    UserName = Input.NomeDeUsuario, // <-- Define o UserName
+                    UserName = Input.NomeDeUsuario,
                     Email = Input.Email,
-                    CPF = Input.CPF                 // <-- DEFINE O CPF!
+                    CPF = Input.CPF
                 };
 
-                // As linhas abaixo não são mais necessárias, pois 'user' já tem os dados
-                // await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
-                // await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
-
-                // --- MUDANÇA 3: O CreateAsync agora recebe o 'user' com CPF ---
                 var result = await _userManager.CreateAsync(user, Input.Password);
 
                 if (result.Succeeded)
                 {
                     _logger.LogInformation("User created a new account with password.");
+
+                    // --- INÍCIO DA MUDANÇA ---
+                    // Adiciona o novo usuário à Role "Servidor" por padrão.
+                    // Isso pressupõe que a Role "Servidor" foi criada no DbContext.
+                    await _userManager.AddToRoleAsync(user, "Servidor");
+                    // --- FIM DA MUDANÇA ---
 
                     var userId = await _userManager.GetUserIdAsync(user);
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
@@ -128,7 +125,7 @@ namespace Projeto22025.Areas.Identity.Pages.Account
                         protocol: Request.Scheme);
 
                     await _emailSender.SendEmailAsync(Input.Email, "Confirm your email",
-                        $"Por favor confirme sua conta em <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>Clicando aqui</a>.");
+                        $"Please confirm your account by <a href='{HtmlEncoder.Default.Encode(callbackUrl)}'>clicking here</a>.");
 
                     if (_userManager.Options.SignIn.RequireConfirmedAccount)
                     {
@@ -142,7 +139,6 @@ namespace Projeto22025.Areas.Identity.Pages.Account
                 }
                 foreach (var error in result.Errors)
                 {
-                    // Se o CPF já existir, o erro será pego aqui e exibido
                     ModelState.AddModelError(string.Empty, error.Description);
                 }
             }
@@ -151,7 +147,6 @@ namespace Projeto22025.Areas.Identity.Pages.Account
             return Page();
         }
 
-        // Este método não é mais chamado, mas podemos deixá-lo
         private Usuario CreateUser()
         {
             try

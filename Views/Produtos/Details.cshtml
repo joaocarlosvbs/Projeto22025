@@ -1,49 +1,61 @@
-﻿@model Produto
+﻿@model Projeto22025.Models.Produto
 
 @{
     ViewData["Title"] = "Details";
-    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Details</h1>
+<h1>Detalhes do Produto</h1>
 
 <div>
-    <h4>Produto</h4>
     <hr />
     <dl class="row">
-        <dt class = "col-sm-2">
+
+        <!-- INÍCIO DA ADIÇÃO DA IMAGEM -->
+        <dt class="col-sm-2">
+            Imagem
+        </dt>
+        <dd class="col-sm-10 mb-3">
+            @if (!string.IsNullOrEmpty(Model.ImagemUrl))
+            {
+                <img src="@Model.ImagemUrl" alt="Imagem do produto" style="width:150px; height:auto; border-radius: 8px;" />
+            }
+            else
+            {
+                <!-- Garanta que você tem um placeholder.png na pasta wwwroot/imagens -->
+                <img src="~/imagens/placeholder.png" alt="Sem imagem" style="width:150px; height:auto; border-radius: 8px;" />
+            }
+        </dd>
+        <!-- FIM DA ADIÇÃO DA IMAGEM -->
+
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Nome)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Nome)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Descricao)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Descricao)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.EstoqueAtual)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.EstoqueAtual)
         </dd>
-        <dt class = "col-sm-2">
+        <dt class="col-sm-2">
             @Html.DisplayNameFor(model => model.Categoria)
         </dt>
-        <dd class = "col-sm-10">
+        <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Categoria.Nome)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ImagemUrl)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.ImagemUrl)
         </dd>
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <AuthorizeView Roles="Almoxarife">
+        <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-primary">Editar</a>
+    </AuthorizeView>
+    <a asp-action="Index" class="btn btn-outline-secondary">Voltar para Lista</a>
 </div>

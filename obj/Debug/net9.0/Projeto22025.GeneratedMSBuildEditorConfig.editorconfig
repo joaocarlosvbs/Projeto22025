@@ -240,6 +240,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aW1lbnRhY2FvXFJlZ2lzdHJhckVudHJhZGEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/FEMA/Downloads/Projeto22025/Views/Movimentacao/RegistrarSaida.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW92aW1lbnRhY2FvXFJlZ2lzdHJhclNhaWRhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/FEMA/Downloads/Projeto22025/Views/Produtos/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHV0b3NcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -262,6 +266,22 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/FEMA/Downloads/Projeto22025/Views/Relatorios/ConsumoPorSetor.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVsYXRvcmlvc1xDb25zdW1vUG9yU2V0b3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FEMA/Downloads/Projeto22025/Views/Relatorios/MediaSaidaProduto.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVsYXRvcmlvc1xNZWRpYVNhaWRhUHJvZHV0by5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FEMA/Downloads/Projeto22025/Views/Relatorios/MovimentacoesPorData.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVsYXRvcmlvc1xNb3ZpbWVudGFjb2VzUG9yRGF0YS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FEMA/Downloads/Projeto22025/Views/Relatorios/MovimentacoesPorDataResult.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVsYXRvcmlvc1xNb3ZpbWVudGFjb2VzUG9yRGF0YVJlc3VsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/FEMA/Downloads/Projeto22025/Views/Relatorios/Pivot.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVsYXRvcmlvc1xQaXZvdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/FEMA/Downloads/Projeto22025/Views/Setores/Create.cshtml]
