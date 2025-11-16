@@ -10,8 +10,9 @@ namespace Projeto22025.Models
         [Display(Name = "Razão Social")]
         public string Razaosocial { get; set; } = string.Empty;
 
-        // A MUDANÇA IMPORTANTE É O 'string?' (permitir nulo)
+        [Required]
+        [StringLength(14, MinimumLength = 14, ErrorMessage = "O CNPJ deve ter 14 dígitos.")]
         [Display(Name = "CNPJ")]
-        public string? Cnpj { get; set; }
+        public string Cnpj { get; set; } = string.Empty;
     }
 }

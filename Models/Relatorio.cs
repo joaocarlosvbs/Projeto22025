@@ -4,5 +4,6 @@
     {
         public string Grupo { get; set; } = string.Empty;
         public double Total { get; set; }
+        public decimal Totalf { get; set; }
     }
 }

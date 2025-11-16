@@ -1,59 +1,67 @@
 ﻿@model Projeto22025.Models.Produto
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Detalhes do Produto";
 }
 
-<h1>Detalhes do Produto</h1>
+<h1>@ViewData["Title"]</h1>
 
-<div>
-    <hr />
-    <dl class="row">
+<div class="card shadow-sm">
+    <div class="card-body">
+        <dl class="row">
 
-        <!-- INÍCIO DA ADIÇÃO DA IMAGEM -->
-        <dt class="col-sm-2">
-            Imagem
-        </dt>
-        <dd class="col-sm-10 mb-3">
-            @if (!string.IsNullOrEmpty(Model.ImagemUrl))
-            {
-                <img src="@Model.ImagemUrl" alt="Imagem do produto" style="width:150px; height:auto; border-radius: 8px;" />
-            }
-            else
-            {
-                <!-- Garanta que você tem um placeholder.png na pasta wwwroot/imagens -->
-                <img src="~/imagens/placeholder.png" alt="Sem imagem" style="width:150px; height:auto; border-radius: 8px;" />
-            }
-        </dd>
-        <!-- FIM DA ADIÇÃO DA IMAGEM -->
+            <dt class="col-sm-2">
+                Imagem
+            </dt>
+            <dd class="col-sm-10 mb-3">
+                @if (!string.IsNullOrEmpty(Model.ImagemUrl))
+                {
+                    <img src="@Model.ImagemUrl" alt="Imagem do produto" style="width:150px; height:auto; border-radius: 8px;" />
+                }
+                else
+                {
+                    <img src="~/imagens/placeholder.png" alt="Sem imagem" style="width:150px; height:auto; border-radius: 8px;" />
+                }
+            </dd>
 
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Nome)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Nome)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Descricao)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Descricao)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.EstoqueAtual)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.EstoqueAtual)
-        </dd>
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Categoria)
-        </dt>
-        <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Categoria.Nome)
-        </dd>
-    </dl>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Nome)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Nome)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Descricao)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Descricao)
+            </dd>
+
+            <!-- INÍCIO DA MUDANÇA -->
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Preco)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Preco)
+            </dd>
+            <!-- FIM DA MUDANÇA -->
+
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.EstoqueAtual)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.EstoqueAtual)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Categoria)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Categoria.Nome)
+            </dd>
+        </dl>
+    </div>
 </div>
-<div>
+<div class="mt-3">
     <AuthorizeView Roles="Almoxarife">
         <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn btn-primary">Editar</a>
     </AuthorizeView>

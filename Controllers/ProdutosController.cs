@@ -3,13 +3,12 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Projeto22025.Data;
 using Projeto22025.Models;
-using Microsoft.AspNetCore.Hosting; // Para IWebHostEnvironment
-using Microsoft.AspNetCore.Authorization; // Para [Authorize]
-using System.IO; // Para Path e File
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Authorization;
+using System.IO;
 
 namespace Projeto22025.Controllers
 {
-    // Controller com permissões granulares (Servidor só pode ver)
     [Authorize]
     public class ProdutosController : Controller
     {
@@ -22,15 +21,27 @@ namespace Projeto22025.Controllers
             _hostEnvironment = hostEnvironment;
         }
 
-        // GET: Produtos (Permitido para todos os logados)
-        [AllowAnonymous] // Vamos permitir que mesmo não logados vejam (ou use [Authorize(Roles="Almoxarife, Servidor")])
-        public async Task<IActionResult> Index()
+        [AllowAnonymous]
+        public async Task<IActionResult> Index(string searchString)
         {
-            var applicationDbContext = _context.Produtos.Include(p => p.Categoria);
-            return View(await applicationDbContext.ToListAsync());
+            // 1. Começa a consulta
+            var produtos = from p in _context.Produtos.Include(p => p.Categoria)
+                           select p;
+
+            // 2. Se a 'searchString' não for nula, aplica o filtro 'Where'
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                produtos = produtos.Where(s => s.Nome.Contains(searchString)
+                                            || s.Descricao.Contains(searchString));
+            }
+
+            // 3. Guarda o termo de busca para mostrar na View
+            ViewData["FiltroAtual"] = searchString;
+
+            // 4. Executa a consulta
+            return View(await produtos.OrderBy(p => p.Nome).ToListAsync());
         }
 
-        // GET: Produtos/Details/5 (Permitido para todos os logados)
         [Authorize(Roles = "Almoxarife, Servidor")]
         public async Task<IActionResult> Details(int? id)
         {
@@ -45,7 +56,6 @@ namespace Projeto22025.Controllers
             return View(produto);
         }
 
-        // GET: Produtos/Create (Apenas Almoxarife)
         [Authorize(Roles = "Almoxarife")]
         public IActionResult Create()
         {
@@ -54,7 +64,6 @@ namespace Projeto22025.Controllers
             return View();
         }
 
-        // POST: Produtos/Create (Apenas Almoxarife)
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "Almoxarife")]
@@ -66,7 +75,6 @@ namespace Projeto22025.Controllers
             {
                 if (produto.ImagemUpload != null)
                 {
-                    // Validação de tipo de arquivo
                     var allowedExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif" };
                     var extension = Path.GetExtension(produto.ImagemUpload.FileName).ToLowerInvariant();
 
@@ -77,7 +85,6 @@ namespace Projeto22025.Controllers
                         return View(produto);
                     }
 
-                    // Salvar o arquivo
                     string wwwRootPath = _hostEnvironment.WebRootPath;
                     string pastaImagens = Path.Combine(wwwRootPath, "imagens", "produtos");
 
@@ -102,7 +109,6 @@ namespace Projeto22025.Controllers
             return View(produto);
         }
 
-        // GET: Produtos/Edit/5 (Apenas Almoxarife)
         [Authorize(Roles = "Almoxarife")]
         public async Task<IActionResult> Edit(int? id)
         {
@@ -116,8 +122,6 @@ namespace Projeto22025.Controllers
             return View(produto);
         }
 
-        // POST: Produtos/Edit/5 (Apenas Almoxarife)
-        // --- ESTE É O MÉTODO CORRIGIDO ---
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "Almoxarife")]
@@ -127,10 +131,8 @@ namespace Projeto22025.Controllers
 
             ModelState.Remove("Categoria");
 
-            // --- INÍCIO DA MUDANÇA (Lógica de Upload no Edit) ---
             if (produto.ImagemUpload != null)
             {
-                // 1. Validar a nova imagem
                 var allowedExtensions = new[] { ".jpg", ".jpeg", ".png", ".gif" };
                 var extension = Path.GetExtension(produto.ImagemUpload.FileName).ToLowerInvariant();
                 if (string.IsNullOrEmpty(extension) || !allowedExtensions.Contains(extension))
@@ -140,7 +142,6 @@ namespace Projeto22025.Controllers
                     return View(produto);
                 }
 
-                // 2. Salvar a nova imagem
                 string wwwRootPath = _hostEnvironment.WebRootPath;
                 string pastaImagens = Path.Combine(wwwRootPath, "imagens", "produtos");
                 string fileName = Guid.NewGuid().ToString() + extension;
@@ -151,21 +152,16 @@ namespace Projeto22025.Controllers
                     await produto.ImagemUpload.CopyToAsync(fileStream);
                 }
 
-                // 3. Deletar a imagem antiga (se existir)
                 if (!string.IsNullOrEmpty(produto.ImagemUrl))
                 {
-                    // TrimStart('/') é crucial para o Path.Combine funcionar
                     string oldFilePath = Path.Combine(wwwRootPath, produto.ImagemUrl.TrimStart('/'));
                     if (System.IO.File.Exists(oldFilePath))
                     {
                         System.IO.File.Delete(oldFilePath);
                     }
                 }
-
-                // 4. Atualizar o Model com o caminho da nova imagem
                 produto.ImagemUrl = "/imagens/produtos/" + fileName;
             }
-            // --- FIM DA MUDANÇA ---
 
             if (ModelState.IsValid)
             {
@@ -187,7 +183,6 @@ namespace Projeto22025.Controllers
             return View(produto);
         }
 
-        // GET: Produtos/Delete/5 (Apenas Almoxarife)
         [Authorize(Roles = "Almoxarife")]
         public async Task<IActionResult> Delete(int? id)
         {
@@ -203,8 +198,6 @@ namespace Projeto22025.Controllers
             return View(produto);
         }
 
-        // POST: Produtos/Delete/5 (Apenas Almoxarife)
-        // --- ESTE É O SEGUNDO MÉTODO CORRIGIDO ---
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         [Authorize(Roles = "Almoxarife")]
@@ -213,7 +206,6 @@ namespace Projeto22025.Controllers
             var produto = await _context.Produtos.FindAsync(id);
             if (produto != null)
             {
-                // --- INÍCIO DA MUDANÇA (Deletar arquivo de imagem) ---
                 if (!string.IsNullOrEmpty(produto.ImagemUrl))
                 {
                     string filePath = Path.Combine(_hostEnvironment.WebRootPath, produto.ImagemUrl.TrimStart('/'));
@@ -222,8 +214,6 @@ namespace Projeto22025.Controllers
                         System.IO.File.Delete(filePath);
                     }
                 }
-                // --- FIM DA MUDANÇA ---
-
                 _context.Produtos.Remove(produto);
                 await _context.SaveChangesAsync();
             }

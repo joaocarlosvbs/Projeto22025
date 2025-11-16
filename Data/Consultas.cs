@@ -21,7 +21,7 @@ namespace Projeto22025.Data
                 .Select(g => new Relatorio
                 {
                     Grupo = g.Key,
-                    Total = g.Sum(m => m.Quantidade) // O 'Sum' (int) cabe no 'double'
+                    Total = g.Sum(m => m.Quantidade)
                 })
                 .OrderByDescending(r => r.Total)
                 .ToListAsync();
@@ -49,28 +49,25 @@ namespace Projeto22025.Data
                 .ToListAsync();
         }
 
-        // --- RELATÓRIO 3 (NOVO): Média de Saída por Produto ---
+        // --- RELATÓRIO 3: Média de Saída por Produto ---
         public async Task<List<Relatorio>> GetMediaSaidaProdutoAsync()
         {
             return await _context.Movimentacoes
                 .Where(m => m.Tipo == "Saída" && m.Produto != null)
-                .GroupBy(m => m.Produto.Nome) // Agrupa por Produto
-                .Select(g => new Relatorio // <-- REUTILIZA o "pacote" Relatorio.cs
+                .GroupBy(m => m.Produto.Nome)
+                .Select(g => new Relatorio
                 {
                     Grupo = g.Key,
-                    // Calcula a Média (Average), que é um 'double'
                     Total = g.Average(m => m.Quantidade)
                 })
                 .OrderByDescending(r => r.Total)
                 .ToListAsync();
         }
 
-        // --- RELATÓRIO 4 (NOVO): Extrato por Data ---
-        // Não usa "pacote". Retorna a lista do Model original.
+        // --- RELATÓRIO 4: Extrato por Data ---
         public async Task<List<Movimentacao>> GetMovimentacoesPorDataAsync(DateTime dataInicio, DateTime dataFim)
         {
-            // Adiciona 1 dia ao dataFim para incluir o dia inteiro
-            dataFim = dataFim.AddDays(1);
+            dataFim = dataFim.AddDays(1); // Ajuste para incluir o dia final
 
             return await _context.Movimentacoes
                 .Where(m => m.Data >= dataInicio && m.Data < dataFim)
@@ -80,6 +77,32 @@ namespace Projeto22025.Data
                 .Include(m => m.Usuario)
                 .OrderByDescending(m => m.Data)
                 .ToListAsync();
+        }
+
+        // --- RELATÓRIO 5 (CORRIGIDO): Estoque Valorado ---
+        public async Task<List<Relatorio>> GetEstoqueValoradoAsync()
+        {
+            // 1. Traz os dados brutos do SQL Server primeiro
+            var produtos = await _context.Produtos
+                .Where(p => p.EstoqueAtual > 0)
+                .Include(p => p.Categoria)
+                .AsNoTracking()
+                .ToListAsync();
+
+            // 2. Agora, o C# faz o agrupamento e o cálculo na memória
+            var relatorio = produtos
+                .Where(p => p.Categoria != null)
+                .GroupBy(p => p.Categoria.Nome)
+                .Select(g => new Relatorio // Usa o "pacote" genérico Relatorio.cs
+                {
+                    Grupo = g.Key,
+                    // (double) g.Sum(...) converte o 'decimal' do cálculo para 'double'
+                    Total = (double)g.Sum(p => p.EstoqueAtual * p.Preco)
+                })
+                .OrderByDescending(r => r.Total)
+                .ToList();
+
+            return relatorio;
         }
     }
 }

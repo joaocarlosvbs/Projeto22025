@@ -1,71 +1,84 @@
 ﻿@model Projeto22025.Models.Produto
 
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Editar Produto";
 }
 
-<h1>Editar Produto</h1>
+<div class="row justify-content-center">
+    <div class="col-md-7">
+        <div class="card shadow-sm">
+            <div class="card-header">
+                <h4 class="mb-0">@ViewData["Title"]</h4>
+            </div>
+            <div class="card-body">
+                <form asp-action="Edit" enctype="multipart/form-data">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="Id" />
+                    <input type="hidden" asp-for="ImagemUrl" />
 
-<hr />
-<div class="row">
-    <div class="col-md-4">
+                    <div class="form-group mb-3">
+                        <label asp-for="Nome" class="control-label"></label>
+                        <input asp-for="Nome" class="form-control" />
+                        <span asp-validation-for="Nome" class="text-danger"></span>
+                    </div>
+                    <div class="form-group mb-3">
+                        <label asp-for="Descricao" class="control-label"></label>
+                        <input asp-for="Descricao" class="form-control" />
+                        <span asp-validation-for="Descricao" class="text-danger"></span>
+                    </div>
 
-        <!-- INÍCIO DA ADIÇÃO DA IMAGEM (Apenas visualização) -->
-        <div class="form-group mb-3">
-            <label class="control-label">Imagem Atual</label>
-            <div>
-                @if (!string.IsNullOrEmpty(Model.ImagemUrl))
-                {
-                    <img src="@Model.ImagemUrl" alt="Imagem do produto" style="width:150px; height:auto; border-radius: 8px;" />
-                }
-                else
-                {
-                    <img src="~/imagens/placeholder.png" alt="Sem imagem" style="width:150px; height:auto; border-radius: 8px;" />
-                }
+                    <!-- INÍCIO DA MUDANÇA: Preco e Estoque na mesma linha -->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label asp-for="Preco" class="control-label"></label>
+                                <input asp-for="Preco" class="form-control" type="number" step="0.01" />
+                                <span asp-validation-for="Preco" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label asp-for="EstoqueAtual" class="control-label"></label>
+                                <input asp-for="EstoqueAtual" class="form-control" />
+                                <span asp-validation-for="EstoqueAtual" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- FIM DA MUDANÇA -->
+
+                    <div class="form-group mb-3">
+                        <label asp-for="CategoriaId" class="control-label"></label>
+                        <select asp-for="CategoriaId" class="form-control" asp-items="ViewBag.CategoriaId"></select>
+                        <span asp-validation-for="CategoriaId" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label class="control-label">Imagem Atual</label>
+                        <div>
+                            @if (!string.IsNullOrEmpty(Model.ImagemUrl))
+                            {
+                                <img src="@Model.ImagemUrl" alt="Imagem do produto" style="width:100px; height:auto; border-radius: 5px;" />
+                            }
+                            else
+                            {
+                                <img src="~/imagens/placeholder.png" alt="Sem imagem" style="width:100px; height:auto; border-radius: 5px;" />
+                            }
+                        </div>
+                    </div>
+
+                    <div class="form-group mb-3">
+                        <label asp-for="ImagemUpload" class="control-label">(Trocar Imagem)</label>
+                        <input asp-for="ImagemUpload" class="form-control" type="file" accept="image/png, image/jpeg, image/gif" />
+                        <span asp-validation-for="ImagemUpload" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="submit" value="Salvar" class="btn btn-primary" />
+                        <a asp-action="Index" class="btn btn-outline-secondary">Cancelar</a>
+                    </div>
+                </form>
             </div>
         </div>
-        <!-- FIM DA ADIÇÃO DA IMAGEM -->
-
-        <form asp-action="Edit" enctype="multipart/form-data">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Id" />
-
-            <!-- Precisamos manter a URL antiga se nenhuma imagem nova for enviada -->
-            <input type="hidden" asp-for="ImagemUrl" />
-
-            <div class="form-group mb-3">
-                <label asp-for="Nome" class="control-label"></label>
-                <input asp-for="Nome" class="form-control" />
-                <span asp-validation-for="Nome" class="text-danger"></span>
-            </div>
-            <div class="form-group mb-3">
-                <label asp-for="Descricao" class="control-label"></label>
-                <input asp-for="Descricao" class="form-control" />
-                <span asp-validation-for="Descricao" class="text-danger"></span>
-            </div>
-            <div class="form-group mb-3">
-                <label asp-for="EstoqueAtual" class="control-label"></label>
-                <input asp-for="EstoqueAtual" class="form-control" />
-                <span asp-validation-for="EstoqueAtual" class="text-danger"></span>
-            </div>
-            <div class="form-group mb-3">
-                <label asp-for="CategoriaId" class="control-label"></label>
-                <select asp-for="CategoriaId" class="form-control" asp-items="ViewBag.CategoriaId"></select>
-                <span asp-validation-for="CategoriaId" class="text-danger"></span>
-            </div>
-
-            <!-- Campo para enviar UMA NOVA imagem -->
-            <div class="form-group mb-3">
-                <label asp-for="ImagemUpload" class="control-label">(Trocar Imagem)</label>
-                <input asp-for="ImagemUpload" class="form-control" type="file" accept="image/png, image/jpeg, image/gif" />
-                <span asp-validation-for="ImagemUpload" class="text-danger"></span>
-            </div>
-
-            <div class="form-group">
-                <input type="submit" value="Salvar" class="btn btn-primary" />
-                <a asp-action="Index" class="btn btn-outline-secondary">Cancelar</a>
-            </div>
-        </form>
     </div>
 </div>
 

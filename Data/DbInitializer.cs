@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using Projeto22025.Models;
 using Microsoft.EntityFrameworkCore; // Para o .Any()
+using System; // Para o Math.Round
 
 namespace Projeto22025.Data
 {
@@ -14,6 +15,7 @@ namespace Projeto22025.Data
             using (var scope = app.ApplicationServices.CreateScope())
             {
                 var context = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+                // (Assumindo que sua classe de usuário se chama 'Usuario')
                 var userManager = scope.ServiceProvider.GetRequiredService<UserManager<Usuario>>();
                 var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
 
@@ -22,7 +24,7 @@ namespace Projeto22025.Data
 
                 // --- PASSO 1: A "TRAVA" ---
                 // Verifica se já existem produtos. Se sim, não faz NADA.
-                if (context.Produtos.Any())
+                if (await context.Produtos.AnyAsync())
                 {
                     return; // O banco já foi populado
                 }
@@ -40,7 +42,8 @@ namespace Projeto22025.Data
                 // --- PASSO 3: CRIAR DADOS BÁSICOS (FKs) ---
 
                 // Criar 1 Fornecedor (para Entradas)
-                var fornecedor = new Fornecedor { Razaosocial = "Fornecedor Principal" };
+                // CORREÇÃO 1: 'Razaosocial' -> 'RazaoSocial'
+                var fornecedor = new Fornecedor { Razaosocial = "Fornecedor Principal", Cnpj = "11222333000144" };
                 await context.Fornecedores.AddAsync(fornecedor);
 
                 // Criar 10 Setores (para Saídas)
@@ -69,7 +72,7 @@ namespace Projeto22025.Data
                     {
                         UserName = "almoxarife",
                         Email = "almoxarife@estoque.com",
-                        CPF = "12345678901", // (Lembre-se de usar um CPF válido para testes)
+                        CPF = "12345678901", // (Use um CPF válido para testes)
                         EmailConfirmed = true
                     };
                     await userManager.CreateAsync(almoxarife, "Password123!");
@@ -81,7 +84,12 @@ namespace Projeto22025.Data
                     .RuleFor(p => p.Nome, f => f.Commerce.ProductName())
                     .RuleFor(p => p.Descricao, f => f.Commerce.ProductDescription())
                     .RuleFor(p => p.EstoqueAtual, f => f.Random.Number(100, 500))
+
+                    // CORREÇÃO 2: Trocado 'f.Finance.Amount()' por 'f.Random.Decimal()'
+                    .RuleFor(p => p.Preco, f => Math.Round(f.Random.Decimal(1.00m, 1000.00m), 2))
+
                     .RuleFor(p => p.CategoriaId, f => f.PickRandom(categorias).Id);
+
                 var produtos = produtoFaker.Generate(100);
                 await context.Produtos.AddRangeAsync(produtos);
                 await context.SaveChangesAsync();

@@ -45,16 +45,14 @@ body {
         background-color: #0b5ed7;
     }
 
-/* --- NOVOS ESTILOS --- */
-
-/* Ajusta o GIF no menu */
 .navbar-logo {
-    height: 30px; /* Altura do GIF */
+    height: 80px;
     width: auto;
     margin-right: 8px;
     vertical-align: middle;
-    border-radius: 4px; /* Opcional: arredonda o GIF */
+    border-radius: 4px;
 }
+
 
 /* Ajusta o tamanho dos botões de Login/Register no menu */
 .btn-sm-custom {

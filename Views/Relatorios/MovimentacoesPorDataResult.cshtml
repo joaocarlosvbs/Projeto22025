@@ -12,12 +12,13 @@
 
 <div class="mb-3">
     <button id="btnGerarPdf" class="btn btn-danger">
-        Gerar PDF</Vbutton>
-        <a asp-action="ExportarExtratoExcel"
-           asp-route-dataInicio="@dataInicio"
-           asp-route-dataFim="@dataFim"
-           class="btn btn-success">Gerar Excel</a>
-        <a asp-action="MovimentacoesPorData" class="btn btn-outline-secondary">Voltar ao Filtro</a>
+        Gerar PDF
+    </button>
+    <a asp-action="ExportarExtratoExcel"
+       asp-route-dataInicio="@dataInicio"
+       asp-route-dataFim="@dataFim"
+       class="btn btn-success">Gerar Excel</a>
+    <a asp-action="MovimentacoesPorData" class="btn btn-outline-secondary">Voltar ao Filtro</a>
 </div>
 
 <div class="card shadow-sm">

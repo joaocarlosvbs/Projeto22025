@@ -14,10 +14,10 @@
                 <form asp-action="RegistrarEntrada">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
+                    <!-- INÍCIO DA MUDANÇA: Adicionado ID 'select-produto' -->
                     <div class="form-group mb-3">
                         <label asp-for="ProdutoId" class="control-label"></label>
-                        <!-- O asp-items="ViewBag.ProdutoId" lê o ViewData["ProdutoId"] -->
-                        <select asp-for="ProdutoId" class="form-control" asp-items="ViewBag.ProdutoId">
+                        <select id="select-produto" asp-for="ProdutoId" class="form-control" asp-items="ViewBag.ProdutoId" placeholder="Selecione um produto...">
                             <option value="">-- Selecione um Produto --</option>
                         </select>
                         <span asp-validation-for="ProdutoId" class="text-danger"></span>
@@ -25,7 +25,6 @@
 
                     <div class="form-group mb-3">
                         <label asp-for="FornecedorId" class="control-label"></label>
-                        <!-- O asp-items="ViewBag.FornecedorId" lê o ViewData["FornecedorId"] -->
                         <select asp-for="FornecedorId" class="form-control" asp-items="ViewBag.FornecedorId">
                             <option value="">-- Selecione um Fornecedor --</option>
                         </select>
@@ -58,4 +57,18 @@
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
+
+    <!-- INÍCIO DA MUDANÇA: Script para ativar o TomSelect -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            new TomSelect('#select-produto',{
+                create: false,
+                sortField: {
+                    field: "text",
+                    direction: "asc"
+                }
+            });
+        });
+    </script>
+    <!-- FIM DA MUDANÇA -->
 }

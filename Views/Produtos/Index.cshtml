@@ -4,75 +4,109 @@
     ViewData["Title"] = "Estoque de Produtos";
 }
 
-<h1>Estoque de Produtos</h1>
+<div class="card shadow-sm">
+    <div class="card-header">
+        <h4 class="mb-0">@ViewData["Title"]</h4>
+    </div>
+    <div class="card-body">
+        <div class="row mb-3">
+            <!-- Coluna para o Botão "Adicionar" -->
+            <div class="col-md-6">
+                <AuthorizeView Roles="Almoxarife">
+                    <p>
+                        <a asp-action="Create" class="btn btn-primary"><i class="bi bi-plus-circle"></i> Adicionar Novo Produto</a>
+                    </p>
+                </AuthorizeView>
+            </div>
 
-<p>
-    <a asp-action="Create" class="btn btn-primary">Adicionar Novo Produto</a>
-</p>
-<table class="table table-striped table-hover">
-    <thead class="table-dark">
-        <tr>
-            <!-- INÍCIO DA MUDANÇA: Adicionamos uma coluna para a Imagem -->
-            <th>
-                Imagem
-            </th>
+            <!-- INÍCIO DA MUDANÇA: Formulário de Pesquisa -->
+            <div class="col-md-6">
+                <form asp-action="Index" method="get">
+                    <div class="input-group">
+                        <input type="text" name="searchString" class="form-control" placeholder="Buscar por nome ou descrição..." value="@ViewData["FiltroAtual"]">
+                        <button class="btn btn-outline-secondary" type="submit"><i class="bi bi-search"></i> Buscar</button>
+                        <a asp-action="Index" class="btn btn-outline-danger" title="Limpar Filtro"><i class="bi bi-x-lg"></i></a>
+                    </div>
+                </form>
+            </div>
             <!-- FIM DA MUDANÇA -->
-            <th>
-                @Html.DisplayNameFor(model => model.Nome)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Descricao)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.EstoqueAtual)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Categoria)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
-                <!-- INÍCIO DA MUDANÇA: Mostramos a imagem ou um placeholder -->
-                <td>
-                    @if (!string.IsNullOrEmpty(item.ImagemUrl))
-                    {
-                        <!--
-                            Opcional: Para "clicar e aparecer na tela" (abrir em nova aba)
-                            Envolvemos a imagem em um link <a>
-                        -->
-                        <a href="@item.ImagemUrl" target="_blank">
-                            <img src="@item.ImagemUrl" alt="Imagem do produto" style="width:75px; height:75px; object-fit: cover; border-radius: 5px;" />
-                        </a>
-                    }
-                    else
-                    {
-                        <!-- Você pode baixar uma imagem "placeholder.png" e salvar em wwwroot/imagens -->
-                        <img src="~/imagens/placeholder.png" alt="Sem imagem" style="width:75px; height:75px; object-fit: cover; border-radius: 5px;" />
-                    }
-                </td>
-                <!-- FIM DA MUDANÇA -->
-                <td>
-                    @Html.DisplayFor(modelItem => item.Nome)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Descricao)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.EstoqueAtual)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Categoria.Nome)
-                </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-outline-primary">Editar</a>
-                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-outline-info">Detalhes</a>
-                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-outline-danger">Deletar</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+        </div>
+
+        <table class="table table-striped table-hover align-middle">
+            <thead class="table-dark">
+                <tr>
+                    <th>
+                        Imagem
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Nome)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Descricao)
+                    </th>
+                    <!-- INÍCIO DA MUDANÇA: Coluna Preço -->
+                    <th>
+                        @Html.DisplayNameFor(model => model.Preco)
+                    </th>
+                    <!-- FIM DA MUDANÇA -->
+                    <th>
+                        @Html.DisplayNameFor(model => model.EstoqueAtual)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Categoria)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @if (!string.IsNullOrEmpty(item.ImagemUrl))
+                            {
+                                <a href="@item.ImagemUrl" target="_blank">
+                                    <img src="@item.ImagemUrl" alt="Imagem do produto" style="width:75px; height:75px; object-fit: cover; border-radius: 5px;" />
+                                </a>
+                            }
+                            else
+                            {
+                                <img src="~/imagens/placeholder.png" alt="Sem imagem" style="width:75px; height:75px; object-fit: cover; border-radius: 5px;" />
+                            }
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Nome)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Descricao)
+                        </td>
+                        <!-- INÍCIO DA MUDANÇA: Coluna Preço -->
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Preco)
+                        </td>
+                        <!-- FIM DA MUDANÇA -->
+                        <td>
+                            @Html.DisplayFor(modelItem => item.EstoqueAtual)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Categoria.Nome)
+                        </td>
+                        <td class="text-end">
+                            <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-outline-info btn-sm" title="Detalhes">
+                                <i class="bi bi-search"></i>
+                            </a>
+                            <AuthorizeView Roles="Almoxarife">
+                                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-outline-primary btn-sm" title="Editar">
+                                    <i class="bi bi-pencil-fill"></i>
+                                </a>
+                                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-outline-danger btn-sm" title="Excluir">
+                                    <i class="bi bi-trash-fill"></i>
+                                </a>
+                            </AuthorizeView>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
