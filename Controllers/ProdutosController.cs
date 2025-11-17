@@ -24,21 +24,17 @@ namespace Projeto22025.Controllers
         [AllowAnonymous]
         public async Task<IActionResult> Index(string searchString)
         {
-            // 1. Começa a consulta
             var produtos = from p in _context.Produtos.Include(p => p.Categoria)
                            select p;
 
-            // 2. Se a 'searchString' não for nula, aplica o filtro 'Where'
             if (!String.IsNullOrEmpty(searchString))
             {
                 produtos = produtos.Where(s => s.Nome.Contains(searchString)
                                             || s.Descricao.Contains(searchString));
             }
 
-            // 3. Guarda o termo de busca para mostrar na View
             ViewData["FiltroAtual"] = searchString;
 
-            // 4. Executa a consulta
             return View(await produtos.OrderBy(p => p.Nome).ToListAsync());
         }
 

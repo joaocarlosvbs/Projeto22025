@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using System.ComponentModel.DataAnnotations.Schema;
 using Projeto22025.Models;
-using System.ComponentModel.DataAnnotations; // <-- Adicionado
+using System.ComponentModel.DataAnnotations;
 
 namespace Projeto22025.Models
 {
@@ -10,12 +10,10 @@ namespace Projeto22025.Models
         public int Id { get; set; }
         public int ProdutoId { get; set; }
 
-        // --- MUDANÇA AQUI ---
         [Required]
         [DataType(DataType.Date)]
         [Display(Name = "Data da Movimentação")]
         public DateTime Data { get; set; }
-        // --- FIM DA MUDANÇA ---
 
         [Required(ErrorMessage = "A quantidade é obrigatória.")]
         [Range(1, int.MaxValue, ErrorMessage = "A quantidade deve ser maior que 0.")]
@@ -31,7 +29,6 @@ namespace Projeto22025.Models
 
         public string UsuarioId { get; set; } = string.Empty;
 
-        // Propriedades de Navegação
         public Produto? Produto { get; set; }
         public Fornecedor? Fornecedor { get; set; }
         public Setor? Setor { get; set; }

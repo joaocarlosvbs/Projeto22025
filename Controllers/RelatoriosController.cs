@@ -4,7 +4,7 @@ using Projeto22025.Models;
 using ClosedXML.Excel;
 using System.IO;
 using Microsoft.AspNetCore.Authorization;
-using System.Linq; // <-- Adicionado para .Sum()
+using System.Linq;
 
 namespace Projeto22025.Controllers
 {
@@ -32,7 +32,6 @@ namespace Projeto22025.Controllers
                 var worksheet = workbook.Worksheets.Add("Consumo por Setor");
                 worksheet.Cell(1, 1).InsertTable(dados, "ConsumoPorSetor", true);
 
-                // Formatação (Polimento)
                 worksheet.Column(2).Style.NumberFormat.Format = "#,##0";
 
                 using (var stream = new MemoryStream())
@@ -84,7 +83,7 @@ namespace Projeto22025.Controllers
                 worksheet.Cell(1, 1).InsertTable(dados, "MediaSaida", true);
 
                 // Formatação (Polimento)
-                worksheet.Column(2).Style.NumberFormat.Format = "0.00"; // 2 casas decimais
+                worksheet.Column(2).Style.NumberFormat.Format = "0.00";
 
                 using (var stream = new MemoryStream())
                 {
@@ -133,14 +132,13 @@ namespace Projeto22025.Controllers
                     worksheet.Cell(row, 3).Value = item.Tipo;
                     worksheet.Cell(row, 4).Value = item.Quantidade;
 
-                    // --- CORREÇÃO 2: 'Razaosocial' -> 'RazaoSocial' ---
                     worksheet.Cell(row, 5).Value = item.Tipo == "Entrada" ? item.Fornecedor?.Razaosocial : item.Setor?.Nome;
 
                     worksheet.Cell(row, 6).Value = item.Usuario?.UserName;
                     row++;
                 }
 
-                worksheet.Columns().AdjustToContents(); // Ajusta largura das colunas
+                worksheet.Columns().AdjustToContents();
 
                 using (var stream = new MemoryStream())
                 {
@@ -150,12 +148,11 @@ namespace Projeto22025.Controllers
             }
         }
 
-        // --- Relatório 5 (Estoque Valorado) ---
+        // --- Relatório 5 (Estoque total por categoria) ---
         public async Task<IActionResult> EstoqueValorado()
         {
             var dados = await _consultas.GetEstoqueValoradoAsync();
 
-            // --- CORREÇÃO 1: 'Totalf' -> 'Total' ---
             ViewBag.TotalGeral = dados.Sum(d => d.Total);
 
             return View(dados);
@@ -172,16 +169,13 @@ namespace Projeto22025.Controllers
                 var totalRow = worksheet.LastRowUsed().RowNumber() + 2;
                 worksheet.Cell(totalRow, 1).Value = "Total Geral";
 
-                // --- CORREÇÃO 1: 'Totalf' -> 'Total' ---
                 worksheet.Cell(totalRow, 2).Value = dados.Sum(d => d.Total);
 
                 worksheet.Cell(totalRow, 1).Style.Font.Bold = true;
                 worksheet.Cell(totalRow, 2).Style.Font.Bold = true;
 
-                // Formatação (Polimento)
                 worksheet.Column(2).Style.NumberFormat.Format = "R$ #,##0.00";
 
-                // --- CORREÇÃO DO TYPO: 'worksTdsModule' -> 'worksheet' ---
                 worksheet.Cell(totalRow, 2).Style.NumberFormat.Format = "R$ #,##0.00";
 
                 using (var stream = new MemoryStream())

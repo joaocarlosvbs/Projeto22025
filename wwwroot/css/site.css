@@ -1,30 +1,26 @@
-/* Remove a borda feia do link "navbar-brand" */
+
 .navbar-brand {
     white-space: normal;
     text-align: center;
     word-break: break-all;
 }
 
-/* Define um fundo suave para o site inteiro */
 body {
     background-color: #f8f9fa;
 }
 
-/* ESTILO DO "HERO" (BANNER) DA PÁGINA INICIAL */
 .home-hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://images.unsplash.com/photo-1586528116311-069b3e0b28d6?q=80&w=1974&auto=format&fit=crop");
     background-size: cover;
     background-position: center;
 }
 
-/* Efeito de sombra e "levantar" nos cards da home */
 .card:hover {
     box-shadow: 0 4px 12px rgba(0,0,0,.08) !important;
     transform: translateY(-2px);
     transition: all 0.2s ease-in-out;
 }
 
-/* ESTILO DO BOTÃO CRÉDITOS */
 .btn-creditos {
     position: fixed;
     bottom: 20px;
@@ -54,7 +50,6 @@ body {
 }
 
 
-/* Ajusta o tamanho dos botões de Login/Register no menu */
 .btn-sm-custom {
     padding: .25rem .6rem;
     font-size: .875rem;

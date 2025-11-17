@@ -1,5 +1,4 @@
-﻿// Em Models/ApplicationUser.cs
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 using System.ComponentModel.DataAnnotations;
 
 namespace Projeto22025.Models

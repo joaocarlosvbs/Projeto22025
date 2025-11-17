@@ -18,18 +18,13 @@ namespace Projeto22025.Controllers
             _context = context;
         }
 
-        // --- LÓGICA DE ENTRADA ---
-
         // GET: /Movimentacao/RegistrarEntrada
-        // Este método é chamado quando você clica no link do menu.
         public IActionResult RegistrarEntrada()
         {
-            // Correção 2 (Boa Prática): Define o Título
             ViewData["Title"] = "Registrar Entrada";
 
             var model = new Movimentacao { Data = DateTime.Today };
 
-            // Correção 3 (A Causa do Erro): Busca os dados e envia para a View
             var fornecedores = _context.Fornecedores.OrderBy(f => f.Razaosocial).ToList();
             var produtos = _context.Produtos.OrderBy(p => p.Nome).ToList();
 
@@ -73,14 +68,11 @@ namespace Projeto22025.Controllers
                 return RedirectToAction("Index", "Produtos");
             }
 
-            // Se a validação falhar, re-popula os dropdowns e o título
             ViewData["Title"] = "Registrar Entrada";
             ViewData["FornecedorId"] = new SelectList(_context.Fornecedores, "Id", "Razaosocial", movimentacao.FornecedorId);
             ViewData["ProdutoId"] = new SelectList(_context.Produtos, "Id", "Nome", movimentacao.ProdutoId);
             return View(movimentacao);
         }
-
-        // --- LÓGICA DE SAÍDA ---
 
         // GET: /Movimentacao/RegistrarSaida
         public IActionResult RegistrarSaida()

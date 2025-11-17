@@ -5,59 +5,79 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@(ViewData["Title"] ?? "Controle de Estoque") - Projeto22025</title>
+
     <script type="importmap"></script>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
     <link href="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/css/tom-select.bootstrap5.css" rel="stylesheet">
-
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Projeto22025.styles.css" asp-append-version="true" />
 </head>
+
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
             <div class="container-fluid">
 
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
-                    <img src="~/imagens/main.gif"
-                         alt="Logo" class="navbar-logo">
+                <a class="navbar-brand" asp-controller="Home" asp-action="Index">
+                    <img src="~/imagens/main.gif" alt="Logo" class="navbar-logo">
                     Systoque
                 </a>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target=".navbar-collapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="navbar-collapse collapse d-sm-inline-flex">
 
                     <ul class="navbar-nav mx-auto">
+
+                        <!-- HOME (todos podem ver) -->
                         <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index"><i class="bi bi-house-door"></i> Home</a>
+                            <a class="nav-link text-light" asp-controller="Home" asp-action="Index">
+                                <i class="bi bi-house-door"></i> Home
+                            </a>
                         </li>
 
-                        <AuthorizeView Roles="Almoxarife, Servidor">
+                        <!-- ESTOQUE (Servidor + Almoxarife) -->
+                        @if (User.IsInRole("Almoxarife") || User.IsInRole("Servidor"))
+                        {
                             <li class="nav-item">
-                                <a class="nav-link text-light" asp-controller="Produtos" asp-action="Index"><i class="bi bi-box-seam"></i> Estoque</a>
+                                <a class="nav-link text-light" asp-controller="Produtos" asp-action="Index">
+                                    <i class="bi bi-box-seam"></i> Estoque
+                                </a>
                             </li>
-                        </AuthorizeView>
+                        }
 
-                        <AuthorizeView Roles="Almoxarife">
+                        <!-- MOVIMENTAÇÃO (somente Almoxarife) -->
+                        @if (User.IsInRole("Almoxarife"))
+                        {
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle text-light" href="#" data-bs-toggle="dropdown">
                                     <i class="bi bi-arrows-expand"></i> Movimentação
                                 </a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" asp-controller="Movimentacao" asp-action="RegistrarEntrada"><i class="bi bi-box-arrow-in-down"></i> Registrar Entrada</a></li>
-                                    <li><a class="dropdown-item" asp-controller="Movimentacao" asp-action="RegistrarSaida"><i class="bi bi-box-arrow-up-right"></i> Registrar Saída</a></li>
+                                    <li>
+                                        <a class="dropdown-item" asp-controller="Movimentacao" asp-action="RegistrarEntrada">
+                                            <i class="bi bi-box-arrow-in-down"></i> Registrar Entrada
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a class="dropdown-item" asp-controller="Movimentacao" asp-action="RegistrarSaida">
+                                            <i class="bi bi-box-arrow-up-right"></i> Registrar Saída
+                                        </a>
+                                    </li>
                                 </ul>
                             </li>
-                        </AuthorizeView>
+                        }
 
-                        <AuthorizeView Roles="Almoxarife">
+                        <!-- RELATÓRIOS (somente Almoxarife) -->
+                        @if (User.IsInRole("Almoxarife"))
+                        {
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle text-light" href="#" data-bs-toggle="dropdown">
                                     <i class="bi bi-file-earmark-bar-graph"></i> Relatórios
                                 </a>
                                 <ul class="dropdown-menu">
@@ -65,15 +85,17 @@
                                     <li><a class="dropdown-item" asp-controller="Relatorios" asp-action="Pivot">Setor por Categoria</a></li>
                                     <li><a class="dropdown-item" asp-controller="Relatorios" asp-action="MediaSaidaProduto">Média de Saídas</a></li>
                                     <li><a class="dropdown-item" asp-controller="Relatorios" asp-action="MovimentacoesPorData">Extrato por Data</a></li>
-                                    <li><hr class="dropdown-divider"></li>
+                                    <li><hr class="dropdown-divider" /></li>
                                     <li><a class="dropdown-item" asp-controller="Relatorios" asp-action="EstoqueValorado">Estoque Total por Categoria (R$)</a></li>
                                 </ul>
                             </li>
-                        </AuthorizeView>
+                        }
 
-                        <AuthorizeView Roles="Almoxarife">
+                        <!-- CADASTROS (somente Almoxarife) -->
+                        @if (User.IsInRole("Almoxarife"))
+                        {
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <a class="nav-link dropdown-toggle text-light" href="#" data-bs-toggle="dropdown">
                                     <i class="bi bi-pencil-square"></i> Cadastros
                                 </a>
                                 <ul class="dropdown-menu">
@@ -83,16 +105,21 @@
                                     <li><a class="dropdown-item" asp-controller="Fornecedores" asp-action="Index">Fornecedores</a></li>
                                 </ul>
                             </li>
-                        </AuthorizeView>
+                        }
+
                     </ul>
 
+                    <!-- LOGIN -->
                     <div class="navbar-nav ms-auto">
                         <partial name="_LoginPartial" />
                     </div>
+
                 </div>
             </div>
         </nav>
     </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
@@ -100,22 +127,24 @@
     </div>
 
     <footer class="footer text-muted">
-        <div class="container">
-        </div>
+        <div class="container"></div>
     </footer>
 
+    <!-- Botão Créditos -->
     <button class="btn-creditos" data-bs-toggle="modal" data-bs-target="#creditosModal" title="Créditos">
         Créditos
     </button>
+
+    <!-- Modal Créditos -->
     <div class="modal fade" id="creditosModal" tabindex="-1" aria-labelledby="creditosModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="creditosModalLabel">Créditos do Projeto</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <p><strong>Trabalho de Linguagem de Programação 2° Semestre</strong></p>
+                    <p><strong>Trabalho de Linguagem de Programação – 2° Semestre</strong></p>
                     <p>
                         <strong>Aluno:</strong> João Carlos Carlos Vinhato Batista da Silva <br />
                         <strong>RA:</strong> 2411600064
@@ -125,19 +154,18 @@
                     <p class="text-muted">2° Ano de Ciência da Computação - FEMA</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fechar</button>
+                    <button class="btn btn-primary" data-bs-dismiss="modal">Fechar</button>
                 </div>
             </div>
         </div>
     </div>
 
-
+    <!-- Scripts -->
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/tom-select@2.3.1/dist/js/tom-select.complete.min.js"></script>
-
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
+
 </body>
 </html>
